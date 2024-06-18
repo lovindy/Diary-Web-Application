@@ -19,7 +19,7 @@ window.addEventListener("load", () => {
       .getElementById("confirmDeleteBtn")
       .addEventListener("click", () => {
         removeCardFromLocalStorage(id);
-        window.location.href = "../../index.html";
+        window.location.href = "../pages/list.html";
       });
   } else {
     document.getElementById(

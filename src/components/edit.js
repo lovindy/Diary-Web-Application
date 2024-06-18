@@ -49,7 +49,7 @@ window.addEventListener("load", () => {
       const newDate = document.getElementById("date").value;
 
       updateCardInLocalStorage(id, newTitle, newNote, newCategory, newDate);
-      window.location.href = "../../index.html";
+      window.location.href = "../pages/list.html";
     });
   } else {
     document.getElementById(

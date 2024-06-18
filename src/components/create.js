@@ -23,7 +23,7 @@ document.getElementById("addCardBtn").addEventListener("click", () => {
     const date = formatDate(now);
     const id = Date.now().toString();
     saveCardToLocalStorage(id, title, note, date, category);
-    window.location.href = "../../index.html";
+    window.location.href = "../pages/list.html";
   } else {
     alert("Please fill out all fields.");
   }
