@@ -25,7 +25,7 @@ function createNavHTML() {
       </ul>
       <div class="nav-buttons">
         <button onclick="toggleDarkMode()" class="button button-secondary">
-          Toggle
+          Theme
         </button>
         <button-component title="Login" type="primary"></button-component>
         <button-component title="Sign Up" type="secondary"></button-component>

@@ -16,7 +16,13 @@ const userData = [
     imgURL: "src/assets/images/User-2.png",
     name: "John Doe",
     feedback:
-      "The ability to add images to my entries really enhances my journaling experience. I enjoy the daily reminders to write; it keeps me consistent.",
+      "The ability to add images to my entries really enhances my journaling experience.",
+  },
+  {
+    imgURL: "src/assets/images/User-3.png",
+    name: "John Doe",
+    feedback:
+      "The ability to add images to my entries really enhances my journaling experience.",
   },
 ];
 

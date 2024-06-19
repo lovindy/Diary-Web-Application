@@ -31,6 +31,7 @@
   --button-warning-hover-bg: #d69e2e;
   --button-default-bg: #4299e1;
   --button-default-hover-bg: #3182ce;
+  --user-feedback-card-bg: linear-gradient(to top, #1b263b, #3f6782, #415a77);
 }
 
 :root.light-mode {
@@ -58,6 +59,7 @@
   --button-warning-hover-bg: #e67e22;
   --button-default-bg: #9b59b6;
   --button-default-hover-bg: #8e44ad;
+  --user-feedback-card-bg: white;
 }
 
 body {
@@ -247,18 +249,17 @@ h1 {
 /* user-feedback-card */
 .user-card-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(4, 2fr);
   grid-auto-rows: auto;
   grid-auto-columns: auto;
   justify-content: space-between;
-  align-items: center;
   gap: 16px;
   padding: 16px;
 }
 
 .user-feedback-card {
-  background: linear-gradient(to top, #1b263b, #3f6782, #415a77);
-  color: white;
+  background: var(--user-feedback-card-bg);
+  color: var(--text-color);
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -291,4 +292,17 @@ h1 {
 .user-feedback-card p {
   font-size: 14px;
   line-height: 1.6;
+}
+@media screen and (max-width: 1024px) {
+  .user-card-container {
+    grid-template-columns: repeat(2, 3fr);
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .user-card-container {
+    grid-template-columns: repeat(1, 3fr);
+    justify-content: center;
+  }
 }
