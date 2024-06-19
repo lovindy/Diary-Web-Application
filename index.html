@@ -18,26 +18,32 @@
   <body class="container">
     <nav-component></nav-component>
     <!-- hero section -->
-    <div class="hero-section">
-      <!-- text-content -->
-      <div class="text-content">
-        <h1 class="jolly-lodger-regular">DEVELOPER DIARY NOTE</h1>
-        <p>
-          A diary web application note is a digital platform designed to allow
-          users to record their thoughts, experiences, and reflections
-          conveniently.
-        </p>
-        <a href="src/pages/list.html"
-          ><button class="button button-primary">Get Started</button></a
-        >
+    <div class="content-container">
+      <div class="hero-section">
+        <!-- text-content -->
+        <div class="text-content">
+          <h1 class="jolly-lodger-regular">DEVELOPER DIARY NOTE</h1>
+          <p>
+            A diary web application note is a digital platform designed to allow
+            users to record their thoughts, experiences, and reflections
+            conveniently.
+          </p>
+          <a href="src/pages/list.html"
+            ><button class="button button-primary">Get Started</button></a
+          >
+        </div>
+        <!-- image -->
+        <div class="hero-image">
+          <img src="src/assets/images/HeroImage.png" alt="" />
+        </div>
       </div>
-      <!-- image -->
-      <div class="hero-image">
-        <img src="src/assets/images/HeroImage.png" alt="" />
+      <!-- user header -->
+      <div class="user-header">
+        <h1 class="jolly-lodger-regular">User Feedback 2024</h1>
       </div>
+      <!-- user feedback card -->
+      <user-card-component></user-card-component>
     </div>
-    <!-- user feedback card -->
-    <user-card-component></user-card-component>
   </body>
   <script src="../../script.js"></script>
   <script src="/src/components/appearance.js"></script>
