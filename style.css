@@ -23,14 +23,10 @@
   --button-secondary-color: white;
   --button-secondary-hover-bg: white;
   --button-secondary-hover-color: black;
-  --button-danger-bg: #f56565;
+  --button-danger-bg: #1b263b;
   --button-danger-hover-bg: #e53e3e;
   --button-success-bg: #48bb78;
   --button-success-hover-bg: #38a169;
-  --button-warning-bg: #ecc94b;
-  --button-warning-hover-bg: #d69e2e;
-  --button-default-bg: #4299e1;
-  --button-default-hover-bg: #3182ce;
   --user-feedback-card-bg: linear-gradient(to top, #1b263b, #3f6782, #415a77);
 }
 
@@ -45,20 +41,17 @@
   --shadow-color: rgba(0, 0, 0, 0.1);
   --button-primary-bg: #1b263b;
   --button-primary-color: white;
-  --button-primary-hover-bg: #003b7b;
-  --button-primary-hover-color: #ecf0f1;
+  --button-primary-hover-bg: white;
+  --button-primary-hover-color: black;
   --button-secondary-bg: #000000;
   --button-secondary-color: white;
   --button-secondary-hover-bg: #003b7b;
   --button-secondary-hover-color: white;
-  --button-danger-bg: #e74c3c;
-  --button-danger-hover-bg: #c0392b;
+  --button-danger-bg: white;
+  --button-danger-color: black;
+  --button-danger-hover-bg: #e53e3e;
   --button-success-bg: #2ecc71;
   --button-success-hover-bg: #27ae60;
-  --button-warning-bg: #f39c12;
-  --button-warning-hover-bg: #e67e22;
-  --button-default-bg: #9b59b6;
-  --button-default-hover-bg: #8e44ad;
   --user-feedback-card-bg: white;
 }
 

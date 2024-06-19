@@ -21,8 +21,8 @@ function createCardHTML(id, title, note, date, category) {
           <p class="card-category">Category: ${category}</p>
         </div>
         <div class="card-footer">
-          <button class="button edit-btn" onclick="window.location.href='/src/pages/edit.html?id=${id}'">Edit</button>
-          <button class="button delete-btn" onclick="window.location.href='/src/pages/delete.html?id=${id}'">Delete</button>
+          <button class="button button-primary" onclick="window.location.href='/src/pages/edit.html?id=${id}'">Edit</button>
+          <button class="button button-danger" onclick="window.location.href='/src/pages/delete.html?id=${id}'">Delete</button>
         </div>
       </div>
     `;
