@@ -75,11 +75,12 @@ h1 {
 }
 
 .card {
-  background-color: #34495e;
+  background: var(--user-feedback-card-bg);
   border-radius: 8px;
   padding: 16px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  color: white;
+  color: var(--text-color);
+  border: black 1px solid;
 }
 
 .card-header,
