@@ -247,25 +247,39 @@ h1 {
 /* user-feedback-card */
 .user-card-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  padding: 16px 0;
-  transition-duration: 0.3s;
-  align-items: start;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: auto;
+  grid-auto-columns: auto;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
 }
 
 .user-feedback-card {
   background: linear-gradient(to top, #1b263b, #3f6782, #415a77);
-  color: white; /* Set text color to white for better readability */
+  color: white;
   border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
-  flex-direction: column; /* Align content vertically */
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  transition-duration: 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
   padding: 16px;
+  text-align: center;
+}
+
+.user-feedback-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .user-feedback-card img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
   margin-bottom: 10px;
 }
 

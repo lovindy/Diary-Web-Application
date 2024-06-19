@@ -21,14 +21,13 @@ const userData = [
 ];
 
 // Function to create the user feedback HTML
-function createUserFeedbackHTML(imageUrl, userName, feedback) {
+function createUserFeedbackHTML(user) {
   return `
-        <div class="user-feedback-card">
-            <img src="${imageUrl}" alt="User Image" />
-            <h3>${userName}</h3>
-            <p>${feedback}</p>
-        </div>
-    `;
+    <div class="user-feedback-card">
+      <img src="${user.imgURL}" alt="User Image" />
+      <h3>${user.name}</h3>
+      <p>${user.feedback}</p>
+    </div>`;
 }
 
 // Define the custom element
@@ -38,16 +37,15 @@ class UserFeedbackComponent extends HTMLElement {
   }
 
   render() {
+    const container = document.createElement("div");
+    container.classList.add("user-card-container");
+
     userData.forEach((user) => {
-      const card = document.createElement("div");
-      card.classList.add("user-feedback-card");
-      card.innerHTML = createUserFeedbackHTML(
-        user.imgURL,
-        user.name,
-        user.feedback
-      );
-      this.appendChild(card);
+      const cardHTML = createUserFeedbackHTML(user);
+      container.innerHTML += cardHTML;
     });
+
+    this.appendChild(container);
   }
 }
 
