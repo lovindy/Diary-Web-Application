@@ -7,7 +7,8 @@
 
 /* button toggle dark and light mode */
 :root {
-  --background-image: url(./src/assets/icons/BackgroundDiary.svg);
+  /* --background-image: url(./src/assets/icons/Landing-Dark-Mode.svg); */
+  --background-color: #212529;
   --text-color: #ecf0f1;
   --card-background-color: #34495e;
   --nav-button-bg: #3498db;
@@ -27,11 +28,17 @@
   --button-danger-hover-bg: #e53e3e;
   --button-success-bg: #48bb78;
   --button-success-hover-bg: #38a169;
-  --user-feedback-card-bg: linear-gradient(to top, #1b263b, #3f6782, #415a77);
+  --user-feedback-card-bg: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Semi-transparent white */
 }
 
 :root.light-mode {
-  --background-image: url(./src/assets/icons/LightMode4.svg);
+  /* --background-image: url(./src/assets/icons/LightMode4.svg); */
+  --background-color: #adb5bd;
   --text-color: #2c3e50;
   --card-background-color: #bdc3c7;
   --nav-button-bg: #3498db;
@@ -52,11 +59,17 @@
   --button-danger-hover-bg: #e53e3e;
   --button-success-bg: #2ecc71;
   --button-success-hover-bg: #27ae60;
-  --user-feedback-card-bg: white;
+  --user-feedback-card-bg: rgba(
+    255,
+    255,
+    255,
+    0.258
+  ); /* Semi-transparent white */
 }
 
 body {
-  background-image: var(--background-image);
+  /* background-image: var(--background-image); */
+  background-color: var(--background-color);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -180,8 +193,8 @@ h1 {
   }
 }
 
-.jolly-lodger-regular {
-  font-family: "Jolly Lodger", system-ui;
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
   font-style: normal;
   font-size: 64px;
 }
@@ -234,7 +247,7 @@ h1 {
     margin-bottom: 16px;
     text-align: center;
   }
-  .jolly-lodger-regular {
+  .bebas-neue-regular {
     font-size: 48px;
     transition: 0.5s;
   }
@@ -252,21 +265,59 @@ h1 {
 
 .user-feedback-card {
   background: var(--user-feedback-card-bg);
-  color: var(--text-color);
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+  color: var(--text-color);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  transition: transform 0.3s, box-shadow 0.3s;
   padding: 16px;
   text-align: center;
+  transform: translateY(100px); /* Start position offscreen at the bottom */
+  opacity: 0;
+  animation: moveUp 1s ease-out forwards; /* Animation */
+  animation-delay: var(--animation-delay); /* Custom delay for each card */
+  backface-visibility: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+/* Keyframes for the moveUp animation */
+@keyframes moveUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Define the animation */
+@keyframes moveUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Add delay for each card */
+.user-feedback-card:nth-child(1) {
+  --animation-delay: 0.2s;
+}
+.user-feedback-card:nth-child(2) {
+  --animation-delay: 0.4s;
+}
+.user-feedback-card:nth-child(3) {
+  --animation-delay: 0.6s;
+}
+.user-feedback-card:nth-child(4) {
+  --animation-delay: 0.8s;
 }
 
 .user-feedback-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px); /* Hover effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Hover shadow */
 }
 
 .user-feedback-card img {
@@ -277,7 +328,7 @@ h1 {
   margin-bottom: 10px;
 }
 
-.user-feedback-card h3 {
+.user-feedback-card h1 {
   font-size: 18px;
   margin-bottom: 5px;
 }
@@ -286,6 +337,7 @@ h1 {
   font-size: 14px;
   line-height: 1.6;
 }
+
 @media screen and (max-width: 1024px) {
   .user-card-container {
     grid-template-columns: repeat(2, 3fr);
@@ -310,4 +362,5 @@ h1 {
 
 .user-header h1 {
   text-align: center;
+  margin: 64px0;
 }

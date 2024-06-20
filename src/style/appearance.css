@@ -80,7 +80,14 @@ h1 {
   padding: 16px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   color: var(--text-color);
-  border: black 1px solid;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Hover effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Hover shadow */
+  transition: 0.3s;
 }
 
 .card-header,
