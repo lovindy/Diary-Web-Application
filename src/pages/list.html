@@ -17,25 +17,29 @@
   </head>
   <body class="container">
     <nav-component></nav-component>
-    <h1 class="bebas-neue-regular">Whats on your mind</h1>
-    <a class="create-button" href="create.html">
-      <button class="button button-primary">Add New Diary</button>
-    </a>
-    <div id="cardsContainer"></div>
+    <main>
+      <!-- hero section -->
+      <h1 class="bebas-neue-regular">Whats on your mind</h1>
+      <a class="create-button" href="create.html">
+        <button class="button button-primary">Add New Diary</button>
+      </a>
+      <!-- card container -->
+      <div id="cardsContainer"></div>
 
-    <!-- Modal -->
-    <div id="modal" class="modal">
-      <div class="modal-content">
-        <span id="modalClose" class="modal-close">&times;</span>
-        <h2 id="modalTitle"></h2>
-        <p id="modalDate"></p>
-        <p id="modalNote"></p>
-        <p id="modalCategory"></p>
+      <!-- Modal -->
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <span id="modalClose" class="modal-close">x</span>
+          <h2 id="modalTitle"></h2>
+          <p id="modalDate"></p>
+          <p id="modalNote"></p>
+          <p id="modalCategory"></p>
+        </div>
       </div>
-    </div>
-    <script src="../../script.js"></script>
-    <script src="../components/button.js"></script>
-    <script src="../components/appearance.js"></script>
-    <script src="../components/nav.js"></script>
+    </main>
   </body>
+  <script src="../../script.js"></script>
+  <script src="../components/button.js"></script>
+  <script src="../components/appearance.js"></script>
+  <script src="../components/nav.js"></script>
 </html>

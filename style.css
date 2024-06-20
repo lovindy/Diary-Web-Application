@@ -1,13 +1,12 @@
-/* set the default size of website */
+/* Set the default size of website */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-/* button toggle dark and light mode */
+/* Button toggle dark and light mode */
 :root {
-  /* --background-image: url(./src/assets/icons/Landing-Dark-Mode.svg); */
   --background-color: #212529;
   --text-color: #ecf0f1;
   --card-background-color: #34495e;
@@ -33,7 +32,6 @@
 }
 
 :root.light-mode {
-  /* --background-image: url(./src/assets/icons/LightMode4.svg); */
   --background-color: #adb5bd;
   --text-color: #2c3e50;
   --card-background-color: #bdc3c7;
@@ -60,12 +58,7 @@
 }
 
 body {
-  /* background-image: var(--background-image); */
   background-color: var(--background-color);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
   color: var(--text-color);
   font-family: Roboto, sans-serif;
   padding: 20px;
@@ -78,66 +71,16 @@ body {
   margin: 0 auto;
 }
 
-h1 {
+h1,
+.bebas-neue-regular {
   transition-duration: 0.3s;
-}
-
-/* card alignment with grid column with 3 and next card will go down*/
-#cardsContainer {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: auto;
-  grid-auto-columns: auto;
-  gap: 16px;
-  margin: 16px 0;
-  padding: 16px 0;
-  transition-duration: 0.3s;
-  align-items: start;
-}
-
-/* Create Responsive for tablet screen on the grid card */
-@media screen and (max-width: 1024px) {
-  #cardsContainer {
-    grid-template-columns: repeat(2, 1fr);
-    padding: 16px;
-    transition-duration: 0.3s;
-  }
-  .form-container {
-    padding: 16px;
-    transition-duration: 0.3s;
-  }
-  h1 {
-    padding: 16px;
-    transition-duration: 0.3s;
-  }
-}
-
-/* Create Responsive for mobile screen on the grid card */
-@media screen and (max-width: 768px) {
-  #cardsContainer {
-    grid-template-columns: repeat(1, 1fr);
-    padding: 16px;
-    transition-duration: 0.3s;
-  }
-  .form-container {
-    padding: 16px;
-    transition-duration: 0.3s;
-  }
-  h1 {
-    padding: 16px;
-    transition-duration: 0.3s;
-  }
 }
 
 .bebas-neue-regular {
   font-family: "Bebas Neue", sans-serif;
   font-style: normal;
   font-size: 64px;
-  transition: 0.5s;
 }
-
-/* view of the index page */
-/* style on the hero-section */
 
 .hero-section {
   display: flex;
@@ -147,26 +90,22 @@ h1 {
   margin-top: 64px;
 }
 
-/* text-content style */
 .text-content {
   max-width: 500px;
   padding: 16px;
+  text-align: start;
 }
 
-/* text-content style */
 .text-content button {
   margin-top: 16px;
 }
 
 .text-content p {
-  text-align: start;
   margin: 16px 0;
 }
 
-/* hero section in tablet screen responsive */
 @media screen and (max-width: 1024px) {
   .hero-section {
-    /* reverse the content direction */
     flex-direction: column-reverse;
     text-align: center;
   }
@@ -180,33 +119,37 @@ h1 {
     width: 100%;
   }
   .text-content p {
-    margin: 0;
-    margin-bottom: 16px;
-    text-align: center;
-  }
-  .bebas-neue-regular {
-    font-size: 48px;
-    transition: 0.5s;
+    margin: 0 0 16px;
   }
 }
 
-/* user-feedback-card */
 .user-card-container {
   display: grid;
   grid-template-columns: repeat(4, 2fr);
-  grid-auto-rows: auto;
-  grid-auto-columns: auto;
   gap: 16px;
   padding: 16px;
+}
+
+@media screen and (max-width: 1024px) {
+  .user-card-container {
+    grid-template-columns: repeat(2, 3fr);
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .user-card-container {
+    grid-template-columns: repeat(1, 3fr);
+    margin-top: 0;
+  }
 }
 
 .user-feedback-card {
   background: var(--user-feedback-card-bg);
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px); /* Frosted glass effect */
-  -webkit-backdrop-filter: blur(10px); /* For Safari */
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+  box-shadow: 0 4px 8px var(--shadow-color);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   color: var(--text-color);
   display: flex;
   flex-direction: column;
@@ -214,15 +157,14 @@ h1 {
   align-items: center;
   padding: 16px;
   text-align: center;
-  transform: translateY(100px); /* Start position offscreen at the bottom */
+  transform: translateY(100px);
   opacity: 0;
-  animation: moveUp 1s ease-out forwards; /* Animation */
-  animation-delay: var(--animation-delay); /* Custom delay for each card */
+  animation: moveUp 1s ease-out forwards;
+  animation-delay: var(--animation-delay);
   backface-visibility: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Keyframes for the moveUp animation */
 @keyframes moveUp {
   to {
     transform: translateY(0);
@@ -230,31 +172,25 @@ h1 {
   }
 }
 
-/* Define the animation */
-@keyframes moveUp {
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-/* Add delay for each card */
 .user-feedback-card:nth-child(1) {
   --animation-delay: 0.2s;
 }
+
 .user-feedback-card:nth-child(2) {
   --animation-delay: 0.4s;
 }
+
 .user-feedback-card:nth-child(3) {
   --animation-delay: 0.6s;
 }
+
 .user-feedback-card:nth-child(4) {
   --animation-delay: 0.8s;
 }
 
 .user-feedback-card:hover {
-  transform: translateY(-10px); /* Hover effect */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Hover shadow */
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .user-feedback-card img {
@@ -275,20 +211,6 @@ h1 {
   line-height: 1.6;
 }
 
-@media screen and (max-width: 1024px) {
-  .user-card-container {
-    grid-template-columns: repeat(2, 3fr);
-    margin-top: 0;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .user-card-container {
-    grid-template-columns: repeat(1, 3fr);
-    margin-top: 0;
-  }
-}
-
 .content-container {
   display: flex;
   max-width: 1440px;
@@ -304,14 +226,68 @@ h1 {
 
 @media screen and (max-width: 1024px) {
   .user-header h1 {
-    text-align: center;
     margin: 0;
   }
 }
 
-/* align to center */
 .create-button {
   display: flex;
   justify-content: center;
   text-decoration: none;
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  animation: fadeIn 0.5s;
+}
+
+.modal-content {
+  background-color: var(--card-background-color);
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+  height: 50%;
+  animation: slideIn 0.5s;
+}
+
+.modal-close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50%);
+  }
+  to {
+    transform: translateY(0);
+  }
 }

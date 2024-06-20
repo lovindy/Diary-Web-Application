@@ -9,7 +9,10 @@ function formatDate(date) {
 
 // Function to create the card HTML
 function createCardHTML(id, title, note, date, category) {
+  // get the date in "yyyy-MM-dd" format
   const formattedDate = formatDate(date);
+  // Truncate the note if it is too long
+  const truncatedNote = note.length > 15 ? note.substring(0, 15) + "..." : note;
   return `
       <div class="card" data-id="${id}">
         <div class="card-header">
@@ -17,7 +20,7 @@ function createCardHTML(id, title, note, date, category) {
           <span class="card-date">${formattedDate}</span>
         </div>
         <div class="card-body">
-          <p class="card-note">${note}</p>
+          <p class="card-note">${truncatedNote}</p>
           <p class="card-category">Category: ${category}</p>
         </div>
         <div class="card-footer">
@@ -28,23 +31,6 @@ function createCardHTML(id, title, note, date, category) {
     `;
 }
 
-// Load cards from local storage on page load
-window.addEventListener("load", () => {
-  const cards = JSON.parse(localStorage.getItem("cards")) || [];
-  const cardsContainer = document.getElementById("cardsContainer");
-  cards.forEach((card) => {
-    const cardHTML = createCardHTML(
-      card.id,
-      card.title,
-      card.note,
-      card.date,
-      card.category
-    );
-    cardsContainer.insertAdjacentHTML("beforeend", cardHTML);
-  });
-});
-
-// handle expanding the card modal
 // Function to show modal with card details
 function showModal(card) {
   const modal = document.getElementById("modal");
@@ -57,16 +43,27 @@ function showModal(card) {
   modal.style.display = "block";
 }
 
+// Function to close modal
+function closeModal() {
+  const modal = document.getElementById("modal");
+  const modalContent = document.querySelector(".modal-content");
+  modalContent.style.animation = "scaleOut 0.5s, fadeOut 0.5s";
+  setTimeout(() => {
+    modal.style.display = "none";
+    modalContent.style.animation = ""; // Reset animation
+  }, 500); // Match this to the animation duration
+}
+
 // Close modal when the close button is clicked
 document.getElementById("modalClose").onclick = function () {
-  document.getElementById("modal").style.display = "none";
+  closeModal();
 };
 
 // Close modal when clicking outside the modal content
 window.onclick = function (event) {
   const modal = document.getElementById("modal");
   if (event.target === modal) {
-    modal.style.display = "none";
+    closeModal();
   }
 };
 
@@ -81,4 +78,22 @@ document.getElementById("cardsContainer").addEventListener("click", (event) => {
       showModal(card);
     }
   }
+});
+
+// Load cards from local storage on page load
+window.addEventListener("load", () => {
+  const cards = JSON.parse(localStorage.getItem("cards")) || [];
+  const cardsContainer = document.getElementById("cardsContainer");
+  // Loop through each card and create HTML
+  cards.forEach((card) => {
+    const cardHTML = createCardHTML(
+      card.id,
+      card.title,
+      card.note,
+      card.date,
+      card.category
+    );
+    // insertAdjacentHTML is used to insert the HTML at the end of the element
+    cardsContainer.insertAdjacentHTML("beforeend", cardHTML);
+  });
 });
