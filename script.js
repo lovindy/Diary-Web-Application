@@ -43,3 +43,42 @@ window.addEventListener("load", () => {
     cardsContainer.insertAdjacentHTML("beforeend", cardHTML);
   });
 });
+
+// handle expanding the card modal
+// Function to show modal with card details
+function showModal(card) {
+  const modal = document.getElementById("modal");
+  document.getElementById("modalTitle").textContent = card.title;
+  document.getElementById("modalDate").textContent = formatDate(card.date);
+  document.getElementById("modalNote").textContent = card.note;
+  document.getElementById(
+    "modalCategory"
+  ).textContent = `Category: ${card.category}`;
+  modal.style.display = "block";
+}
+
+// Close modal when the close button is clicked
+document.getElementById("modalClose").onclick = function () {
+  document.getElementById("modal").style.display = "none";
+};
+
+// Close modal when clicking outside the modal content
+window.onclick = function (event) {
+  const modal = document.getElementById("modal");
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+};
+
+// Add event listener for card clicks
+document.getElementById("cardsContainer").addEventListener("click", (event) => {
+  const cardElement = event.target.closest(".card");
+  if (cardElement) {
+    const cardId = cardElement.getAttribute("data-id");
+    const cards = JSON.parse(localStorage.getItem("cards")) || [];
+    const card = cards.find((c) => c.id == cardId);
+    if (card) {
+      showModal(card);
+    }
+  }
+});

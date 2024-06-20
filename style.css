@@ -20,20 +20,16 @@
   --button-primary-color: black;
   --button-primary-hover-bg: #1b263b;
   --button-primary-hover-color: white;
-  --button-secondary-bg: #000000;
+  --button-secondary-bg: #1b263b;
   --button-secondary-color: white;
   --button-secondary-hover-bg: white;
   --button-secondary-hover-color: black;
   --button-danger-bg: #1b263b;
+  --button-danger-color: white;
   --button-danger-hover-bg: #e53e3e;
   --button-success-bg: #48bb78;
   --button-success-hover-bg: #38a169;
-  --user-feedback-card-bg: rgba(
-    255,
-    255,
-    255,
-    0.1
-  ); /* Semi-transparent white */
+  --user-feedback-card-bg: rgba(255, 255, 255, 0.1);
 }
 
 :root.light-mode {
@@ -56,15 +52,11 @@
   --button-secondary-hover-color: white;
   --button-danger-bg: white;
   --button-danger-color: black;
+  --button-danger-hover-color: white;
   --button-danger-hover-bg: #e53e3e;
   --button-success-bg: #2ecc71;
   --button-success-hover-bg: #27ae60;
-  --user-feedback-card-bg: rgba(
-    255,
-    255,
-    255,
-    0.258
-  ); /* Semi-transparent white */
+  --user-feedback-card-bg: rgba(255, 255, 255, 0.258);
 }
 
 body {
@@ -315,4 +307,11 @@ h1 {
     text-align: center;
     margin: 0;
   }
+}
+
+/* align to center */
+.create-button {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
 }
