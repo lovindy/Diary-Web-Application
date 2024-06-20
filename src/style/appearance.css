@@ -16,16 +16,6 @@
   color: var(--input-background-color);
 }
 
-.button {
-  padding: 8px 16px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-  background-color: var(--button-background-color);
-  color: var(--button-text-color);
-}
-
 input[type="text"],
 input[type="date"],
 textarea {
@@ -65,6 +55,7 @@ label {
 
 h1 {
   text-align: center;
+  
 }
 
 /* style on each diary card */
@@ -114,28 +105,6 @@ h1 {
 .card-footer {
   display: flex;
   justify-content: space-between;
-}
-
-.button {
-  padding: 8px 16px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.edit-btn {
-  background-color: #3498db;
-  color: white;
-}
-
-.delete-btn {
-  background-color: #e74c3c;
-  color: white;
-}
-
-.hidden {
-  display: none;
 }
 
 h1 {
