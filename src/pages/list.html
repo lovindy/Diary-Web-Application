@@ -8,25 +8,23 @@
     <link rel="stylesheet" href="../style/appearance.css" />
     <link rel="stylesheet" href="../style/nav.css" />
     <link rel="stylesheet" href="../style/button.css" />
-    <!-- import google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Jolly+Lodger&display=swap"
-      rel="stylesheet" />
+      rel="stylesheet"
+    />
   </head>
   <body class="container">
     <nav-component></nav-component>
     <main>
-      <!-- hero section -->
       <h1 class="bebas-neue-regular">Whats on your mind</h1>
       <a class="create-button" href="create.html">
         <button class="button button-primary">Add New Diary</button>
       </a>
-      <!-- card container -->
       <div id="cardsContainer"></div>
 
-      <!-- Modal -->
+      <!-- Edit Modal -->
       <div id="modal" class="modal">
         <div class="modal-content">
           <span id="modalClose" class="modal-close">x</span>
@@ -36,10 +34,26 @@
           <p id="modalCategory"></p>
         </div>
       </div>
+
+      <!-- Delete Modal -->
+      <div id="deleteModal" class="modal">
+        <div class="modal-content">
+          <span id="deleteModalClose" class="modal-close">x</span>
+          <h2>Are you sure you want to delete this diary entry?</h2>
+          <div class="modal-buttons">
+            <button id="confirmDeleteButton" class="button button-delete">
+              Delete
+            </button>
+            <button id="cancelDeleteButton" class="button button-secondary">
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
     </main>
+    <script src="../../script.js"></script>
+    <script src="../components/button.js"></script>
+    <script src="../components/appearance.js"></script>
+    <script src="../components/nav.js"></script>
   </body>
-  <script src="../../script.js"></script>
-  <script src="../components/button.js"></script>
-  <script src="../components/appearance.js"></script>
-  <script src="../components/nav.js"></script>
 </html>

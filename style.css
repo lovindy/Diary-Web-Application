@@ -23,9 +23,9 @@
   --button-secondary-color: white;
   --button-secondary-hover-bg: white;
   --button-secondary-hover-color: black;
-  --button-danger-bg: #1b263b;
-  --button-danger-color: white;
-  --button-danger-hover-bg: #e53e3e;
+  --button-delete-bg: #1b263b;
+  --button-delete-color: white;
+  --button-delete-hover-bg: #e53e3e;
   --button-success-bg: #48bb78;
   --button-success-hover-bg: #38a169;
   --user-feedback-card-bg: rgba(255, 255, 255, 0.1);
@@ -48,10 +48,10 @@
   --button-secondary-color: white;
   --button-secondary-hover-bg: #003b7b;
   --button-secondary-hover-color: white;
-  --button-danger-bg: white;
-  --button-danger-color: black;
-  --button-danger-hover-color: white;
-  --button-danger-hover-bg: #e53e3e;
+  --button-delete-bg: white;
+  --button-delete-color: black;
+  --button-delete-hover-color: white;
+  --button-delete-hover-bg: #e53e3e;
   --button-success-bg: #2ecc71;
   --button-success-hover-bg: #27ae60;
   --user-feedback-card-bg: rgba(255, 255, 255, 0.258);

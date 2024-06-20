@@ -27,8 +27,8 @@ function createNavHTML() {
         <button onclick="toggleDarkMode()" class="button button-secondary">
           Theme
         </button>
-        <button-component title="Login" type="primary"></button-component>
-        <button-component title="Sign Up" type="secondary"></button-component>
+        <button class="button button-primary">Login</button>
+        <button class="button button-secondary">Sign Up</button>
       </div>
       <div class="menu-icon">
         <img src="src/assets/icons/menu-icon.svg" alt="Diary Logo" />
