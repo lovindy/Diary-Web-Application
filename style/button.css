@@ -1,0 +1,56 @@
+.button {
+  padding: 8px 16px;
+  font-weight: 600;
+  outline: none;
+  border-radius: 9999px; /* Rounded full */
+  transition: all 0.3s ease;
+}
+
+.button-primary {
+  background-color: var(--primary-bg);
+  color: var(--primary-color);
+}
+
+.button-primary:hover {
+  background-color: var(--primary-hover-bg);
+  color: var(--primary-hover-color);
+}
+
+.button-secondary {
+  background-color: var(--secondary-bg);
+  color: var(--secondary-color);
+}
+
+.button-secondary:hover {
+  background-color: var(--secondary-hover-bg);
+  color: var(--secondary-hover-color);
+}
+
+.button-delete {
+  background-color: var(--delete-bg);
+  color: var(--delete-color);
+}
+
+.button-delete:hover {
+  background-color: var(--delete-hover-bg);
+  color: var(--delete-hover-color);
+}
+
+.button-success {
+  background-color: var(--success-bg);
+  color: white;
+}
+
+.button-success:hover {
+  background-color: var(--success-hover-bg);
+}
+
+.button-edit {
+  background-color: var(--edit-bg);
+  color: var(--edit-color);
+}
+
+.button-edit:hover {
+  background-color: var(--edit-hover-bg);
+  color: var(--edit-hover-color);
+}

@@ -1,3 +1,8 @@
+/* import css style from another file */
+@import url("/style/appearance.css");
+@import url("/style/button.css");
+@import url("/style/nav.css");
+
 /* Set the default size of website */
 * {
   padding: 0;
@@ -9,54 +14,50 @@
 :root {
   --background-color: #212529;
   --text-color: #ecf0f1;
-  --card-background-color: #34495e;
-  --nav-button-bg: #3498db;
-  --nav-button-color: white;
+  --user-feedback-card-bg: rgba(255, 255, 255, 0.1);
   --input-background-color: #ecf0f1;
   --input-text-color: #2c3e50;
   --shadow-color: rgba(0, 0, 0, 0.2);
-  --button-primary-bg: #ffffff;
-  --button-primary-color: black;
-  --button-primary-hover-bg: #1b263b;
-  --button-primary-hover-color: white;
-  --button-secondary-bg: #1b263b;
-  --button-secondary-color: white;
-  --button-secondary-hover-bg: white;
-  --button-secondary-hover-color: black;
-  --button-delete-bg: #1b263b;
-  --button-delete-color: white;
-  --button-delete-hover-bg: #e53e3e;
-  --button-success-bg: #48bb78;
-  --button-success-hover-bg: #38a169;
-  --user-feedback-card-bg: rgba(255, 255, 255, 0.1);
+  --primary-bg: #ffffff;
+  --primary-color: black;
+  --primary-hover-bg: #1b263b;
+  --primary-hover-color: white;
+  --secondary-bg: #1b263b;
+  --secondary-color: white;
+  --secondary-hover-bg: white;
+  --secondary-hover-color: black;
+  --delete-bg: #1b263b;
+  --delete-color: white;
+  --delete-hover-bg: #e53e3e;
+  --success-bg: #48bb78;
+  --success-hover-bg: #38a169;
 }
 
+/* light mode appearance */
 :root.light-mode {
   --background-color: #adb5bd;
   --text-color: #2c3e50;
-  --card-background-color: #bdc3c7;
-  --nav-button-bg: #3498db;
-  --nav-button-color: #3498db;
+  --user-feedback-card-bg: rgba(255, 255, 255, 0.258);
   --input-background-color: #fff;
   --input-text-color: #2c3e50;
   --shadow-color: rgba(0, 0, 0, 0.1);
-  --button-primary-bg: #1b263b;
-  --button-primary-color: white;
-  --button-primary-hover-bg: white;
-  --button-primary-hover-color: black;
-  --button-secondary-bg: #000000;
-  --button-secondary-color: white;
-  --button-secondary-hover-bg: #003b7b;
-  --button-secondary-hover-color: white;
-  --button-delete-bg: white;
-  --button-delete-color: black;
-  --button-delete-hover-color: white;
-  --button-delete-hover-bg: #e53e3e;
-  --button-success-bg: #2ecc71;
-  --button-success-hover-bg: #27ae60;
-  --user-feedback-card-bg: rgba(255, 255, 255, 0.258);
+  --primary-bg: #1b263b;
+  --primary-color: white;
+  --primary-hover-bg: white;
+  --primary-hover-color: black;
+  --secondary-bg: #000000;
+  --secondary-color: white;
+  --secondary-hover-bg: #003b7b;
+  --secondary-hover-color: white;
+  --delete-bg: white;
+  --delete-color: black;
+  --delete-hover-color: white;
+  --delete-hover-bg: #e53e3e;
+  --success-bg: #2ecc71;
+  --success-hover-bg: #27ae60;
 }
 
+/* Body style apply to all the pages */
 body {
   background-color: var(--background-color);
   color: var(--text-color);
@@ -71,15 +72,12 @@ body {
   margin: 0 auto;
 }
 
-h1,
-.bebas-neue-regular {
-  transition-duration: 0.3s;
-}
-
+/* Title style */
 .bebas-neue-regular {
   font-family: "Bebas Neue", sans-serif;
   font-style: normal;
   font-size: 64px;
+  transition-duration: 0.3s;
 }
 
 .hero-section {
@@ -104,25 +102,7 @@ h1,
   margin: 16px 0;
 }
 
-@media screen and (max-width: 1024px) {
-  .hero-section {
-    flex-direction: column-reverse;
-    text-align: center;
-  }
-  .text-content {
-    text-align: center;
-  }
-  .hero-image {
-    margin-top: 16px;
-  }
-  .hero-image img {
-    width: 100%;
-  }
-  .text-content p {
-    margin: 0 0 16px;
-  }
-}
-
+/* User feedback card container */
 .user-card-container {
   display: grid;
   grid-template-columns: repeat(4, 2fr);
@@ -130,20 +110,7 @@ h1,
   padding: 16px;
 }
 
-@media screen and (max-width: 1024px) {
-  .user-card-container {
-    grid-template-columns: repeat(2, 3fr);
-    margin-top: 0;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .user-card-container {
-    grid-template-columns: repeat(1, 3fr);
-    margin-top: 0;
-  }
-}
-
+/* User feedback card implement the animation move in from the bottom */
 .user-feedback-card {
   background: var(--user-feedback-card-bg);
   border-radius: 8px;
@@ -172,6 +139,7 @@ h1,
   }
 }
 
+/* User feedback card implement the animation move in from the bottom one by one */
 .user-feedback-card:nth-child(1) {
   --animation-delay: 0.2s;
 }
@@ -224,12 +192,6 @@ h1,
   margin: 64px 32px 0;
 }
 
-@media screen and (max-width: 1024px) {
-  .user-header h1 {
-    margin: 0;
-  }
-}
-
 .create-button {
   display: flex;
   justify-content: center;
@@ -274,6 +236,7 @@ h1,
   text-decoration: none;
 }
 
+/* Animation styles on modal */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -289,5 +252,43 @@ h1,
   }
   to {
     transform: translateY(0);
+  }
+}
+
+/* Media queries for responsive design in tablets */
+@media screen and (max-width: 1024px) {
+  .hero-section {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .text-content {
+    text-align: center;
+  }
+  .hero-image {
+    margin-top: 16px;
+  }
+  .hero-image img {
+    width: 100%;
+  }
+  .text-content p {
+    margin: 0 0 16px;
+  }
+  .user-header h1 {
+    margin: 0;
+  }
+  .user-card-container {
+    grid-template-columns: repeat(2, 3fr);
+    margin-top: 0;
+  }
+  .bebas-neue-regular {
+    font-size: 48px;
+  }
+}
+
+/* Media queries for responsive design in mobile */
+@media screen and (max-width: 768px) {
+  .user-card-container {
+    grid-template-columns: repeat(1, 3fr);
+    margin-top: 0;
   }
 }

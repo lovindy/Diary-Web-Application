@@ -12,7 +12,7 @@ function createNavHTML() {
   let navHTML = `
     <nav class="nav-container">
       <!-- Logo -->
-      <div class="logo"><img src="../assets/icons/Diary.svg" alt="Diary Logo" /></div>
+      <div class="logo"><img src="/assets/icons/Diary.svg" alt="Diary Logo" /></div>
       <!-- Link List to other pages -->
       <ul class="nav-links">
   `;
@@ -31,7 +31,7 @@ function createNavHTML() {
         <button class="button button-secondary">Sign Up</button>
       </div>
       <div class="menu-icon">
-        <img src="src/assets/icons/menu-icon.svg" alt="Diary Logo" />
+        <img src="/assets/icons/menu-icon.svg" alt="Diary Logo" />
       </div>
     </nav>
   `;
