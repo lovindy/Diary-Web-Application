@@ -1,28 +1,28 @@
 // User data to be displayed
 const userData = [
   {
-    imgURL: "src/assets/images/User-3.png",
+    imgURL: "/assets/images/User-1.png",
     name: "Jame Smith",
     feedback:
       "The diary web application is incredibly user-friendly and intuitive. I love the sleek design and smooth functionality of the app.",
   },
   {
-    imgURL: "src/assets/images/User-1.png",
+    imgURL: "/assets/images/User-2.png",
     name: "Harley Jane",
     feedback:
       "The search feature makes finding old entries super easy. I appreciate the security features.",
   },
   {
-    imgURL: "src/assets/images/User-2.png",
+    imgURL: "/assets/images/User-3.png",
     name: "John Doe",
     feedback:
       "The ability to add images to my entries really enhances my journaling experience.",
   },
   {
-    imgURL: "src/assets/images/User-3.png",
-    name: "John Doe",
+    imgURL: "/assets/images/User-4.png",
+    name: "Jessica Jen",
     feedback:
-      "The ability to add images to my entries really enhances my journaling experience.",
+      "This diary app is incredibly intuitive! Adding and editing entries is so easy, and I love the minimalist design.",
   },
 ];
 

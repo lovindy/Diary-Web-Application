@@ -13,7 +13,7 @@
 
 .card-date {
   font-size: 14px;
-  color: var(--input-background-color);
+  color: var(--text-color);
 }
 
 input[type="text"],
@@ -65,7 +65,7 @@ h1 {
 }
 
 .card {
-  background: var(--user-feedback-card-bg);
+  background: var(--card-bg);
   border-radius: 8px;
   padding: 16px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -93,7 +93,7 @@ h1 {
 
 .card-date {
   font-size: 14px;
-  color: #bdc3c7;
+  color: var(--date-color);
 }
 
 .card-note,

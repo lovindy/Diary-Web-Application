@@ -4,30 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Diary - Notes</title>
-    <link rel="stylesheet" href="../../style.css" />
-    <link rel="stylesheet" href="../style/appearance.css" />
-    <link rel="stylesheet" href="../style/nav.css" />
-    <link rel="stylesheet" href="../style/button.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Jolly+Lodger&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="../style.css" />
   </head>
   <body class="container">
     <nav-component></nav-component>
     <main>
-      <h1 class="bebas-neue-regular">Whats on your mind</h1>
-      <a class="create-button" href="create.html">
-        <button class="button button-primary">Add New Diary</button>
-      </a>
+      <header>
+        <h1 class="bebas-neue-regular title">Whats on your mind ?</h1>
+        <a class="create-button button button-primary" href="create.html">
+          Add New Diary</a
+        >
+      </header>
+      <!-- render card from javascript create.js and script.js -->
       <div id="cardsContainer"></div>
 
       <!-- Edit Modal -->
       <div id="modal" class="modal">
         <div class="modal-content">
-          <span id="modalClose" class="modal-close">x</span>
+          <!-- Close using time -->
+          <span id="modalClose" class="modal-close">&times;</span>
           <h2 id="modalTitle"></h2>
           <p id="modalDate"></p>
           <p id="modalNote"></p>
@@ -51,9 +46,9 @@
         </div>
       </div>
     </main>
-    <script src="../../script.js"></script>
-    <script src="../components/button.js"></script>
-    <script src="../components/appearance.js"></script>
-    <script src="../components/nav.js"></script>
   </body>
+  <script src="/script.js"></script>
+  <script src="/components/button.js"></script>
+  <script src="/components/appearance.js"></script>
+  <script src="/components/nav.js"></script>
 </html>

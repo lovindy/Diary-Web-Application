@@ -10,7 +10,9 @@ function formatDate(date) {
 // Function to create the card HTML
 function createCardHTML(id, title, note, date, category) {
   const formattedDate = formatDate(date);
-  const truncatedNote = note.length > 15 ? note.substring(0, 15) + "...See More" : note;
+  // Truncate the note if it is longer than 15 characters
+  const truncatedNote =
+    note.length > 15 ? note.substring(0, 15) + "...See More" : note;
   return `
     <div class="card" data-id="${id}">
       <div class="card-header">
@@ -22,7 +24,7 @@ function createCardHTML(id, title, note, date, category) {
         <p class="card-category">Category: ${category}</p>
       </div>
       <div class="card-footer">
-        <button class="button button-primary" onclick="window.location.href='/src/pages/edit.html?id=${id}'">Edit</button>
+        <button class="button button-primary" onclick="window.location.href='/pages/edit.html?id=${id}'">Edit</button>
         <button class="button button-delete" onclick="event.stopPropagation(); showDeleteModal(${id})">Delete</button>
       </div>
     </div>
