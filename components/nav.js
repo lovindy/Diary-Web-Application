@@ -3,7 +3,7 @@ function createNavHTML() {
   const links = [
     { href: "../../index.html", text: "Home" },
     { href: "#", text: "About Us" },
-    { href: "src/pages/list.html", text: "My Diary" },
+    { href: "/pages/list.html", text: "My Diary" },
     { href: "#", text: "Explore" },
     { href: "#", text: "Plans" },
   ];
