@@ -11,9 +11,11 @@
     <main>
       <header>
         <h1 class="bebas-neue-regular title">Whats on your mind ?</h1>
-        <a class="create-button button button-primary" href="create.html">
-          Add New Diary</a
-        >
+        <button  class="button-primary">
+          <a href="create.html">
+            Add New Diary</a
+          >
+        </button>
       </header>
       <!-- render card from javascript create.js and script.js -->
       <div id="cardsContainer"></div>
@@ -36,10 +38,10 @@
           <span id="deleteModalClose" class="modal-close">x</span>
           <h2>Are you sure you want to delete this diary entry?</h2>
           <div class="modal-buttons">
-            <button id="confirmDeleteButton" class="button button-delete">
+            <button id="confirmDeleteButton" class="button-delete">
               Delete
             </button>
-            <button id="cancelDeleteButton" class="button button-secondary">
+            <button id="cancelDeleteButton" class="button-secondary">
               Cancel
             </button>
           </div>

@@ -6,6 +6,7 @@
 @import url("/style/button.css");
 @import url("/style/nav.css");
 @import url("/style/viewlist.css");
+@import url("/style/authorization.css");
 
 /* Set the default size of website */
 * {
@@ -72,6 +73,15 @@ body {
   font-family: Roboto, sans-serif;
   padding: 16px;
   transition: 0.5s;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+a:hover {
+  color: var(--primary-hover-color);
 }
 
 .container {
@@ -167,6 +177,7 @@ body {
 .user-feedback-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
 }
 
 .user-feedback-card img {
