@@ -9,14 +9,20 @@
   <body class="container">
     <nav-component></nav-component>
     <main>
-      <header>
-        <h1 class="bebas-neue-regular title">Whats on your mind ?</h1>
-        <button  class="button-primary">
-          <a href="create.html">
-            Add New Diary</a
+      <div class="hero-section-view">
+        <!-- image -->
+        <div class="hero-image">
+          <img src="/assets/icons/Space-ViewList.svg" alt="" />
+        </div>
+        <!-- text-content -->
+        <div class="text-content">
+          <h1 class="bebas-neue-regular">whats on your mind ?</h1>
+          <p>Prepare your day with a diary note.</p>
+          <a href="create.html"
+            ><button class="button-primary">Create Note</button></a
           >
-        </button>
-      </header>
+        </div>
+      </div>
       <!-- render card from javascript create.js and script.js -->
       <div id="cardsContainer"></div>
 
@@ -24,7 +30,7 @@
       <div id="modal" class="modal">
         <div class="modal-content">
           <!-- Close using time -->
-          <span id="modalClose" class="modal-close">&times;</span>
+          <span id="modalClose" class="modal-close">x</span>
           <h2 id="modalTitle"></h2>
           <p id="modalDate"></p>
           <p id="modalNote"></p>
@@ -35,13 +41,15 @@
       <!-- Delete Modal -->
       <div id="deleteModal" class="modal">
         <div class="modal-content">
+          <img src="/assets/icons/Delete--Streamline-Tokyo.svg" alt="" />
           <span id="deleteModalClose" class="modal-close">x</span>
           <h2>Are you sure you want to delete this diary entry?</h2>
+
           <div class="modal-buttons">
             <button id="confirmDeleteButton" class="button-delete">
               Delete
             </button>
-            <button id="cancelDeleteButton" class="button-secondary">
+            <button id="cancelDeleteButton" class="button-primary">
               Cancel
             </button>
           </div>

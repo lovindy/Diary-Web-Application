@@ -32,13 +32,6 @@ button {
   opacity: 0.8;
 }
 
-#cardsContainer {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-  margin-top: 16px;
-}
-
 .container {
   padding: 16px;
 }
@@ -53,17 +46,7 @@ label {
   font-weight: bold;
 }
 
-h1 {
-  text-align: center;
-}
-
 /* style on each diary card */
-.container {
-  max-width: 1440px;
-  padding: 16px;
-  margin: 0 auto;
-}
-
 .card {
   background: var(--card-bg);
   border-radius: 8px;
@@ -106,15 +89,12 @@ h1 {
   justify-content: space-between;
 }
 
-h1 {
-  transition-duration: 0.3s;
-}
-
 /* card alignment with grid column with 3 and next card will go down*/
 #cardsContainer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   margin: 16px 0;
+  gap: 16px;
   padding: 16px 0;
   transition-duration: 0.3s;
   align-items: start;

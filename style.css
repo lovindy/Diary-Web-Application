@@ -75,15 +75,6 @@ body {
   transition: 0.5s;
 }
 
-a {
-  text-decoration: none;
-  color: var(--primary-color);
-}
-
-a:hover {
-  color: var(--primary-hover-color);
-}
-
 .container {
   max-width: 1440px;
   padding: 16px;
