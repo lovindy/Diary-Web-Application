@@ -26,7 +26,6 @@ header {
   background-color: rgba(0, 0, 0, 0.4);
   animation: fadeIn 0.5s;
   overflow: hidden;
-  display: flex; /* Center modal horizontally and vertically */
   justify-content: center; /* Center modal horizontally */
   align-items: center; /* Center modal vertically */
 }
@@ -36,7 +35,7 @@ header {
   padding: 20px;
   border: 1px solid #888;
   width: 50%;
-  height: auto; /* Remove fixed height to adjust based on content */
+  height: auto; 
   animation: slideIn 0.5s;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1); /* Added box-shadow for a professional look */
@@ -59,7 +58,6 @@ header {
 }
 
 .modal-buttons {
-  display: flex;
   justify-content: center;
   align-items: center;
   gap: 16px;
@@ -82,6 +80,11 @@ header {
   transition: 0.3s;
 }
 
+/* Specific styles for the view card modal content */
+.view-modal-content {
+  text-align: left;
+}
+
 /* Animation styles on modal */
 @keyframes fadeIn {
   from {
@@ -100,3 +103,4 @@ header {
     transform: translateY(0);
   }
 }
+

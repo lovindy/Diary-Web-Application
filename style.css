@@ -121,7 +121,7 @@ body {
 
 /* User feedback card implement the animation move in from the bottom */
 .user-feedback-card {
-  background: var(--user-feedback-card-bg);
+  background: var(--card-bg);
   border-radius: 8px;
   box-shadow: 0 4px 8px var(--shadow-color);
   backdrop-filter: blur(10px);
