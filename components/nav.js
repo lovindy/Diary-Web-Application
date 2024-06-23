@@ -27,8 +27,8 @@ function createNavHTML() {
         <button onclick="toggleDarkMode()" class="button button-secondary">
           Theme
         </button>
-        <button class="button button-primary">Login</button>
-        <button class="button button-secondary">Sign Up</button>
+        <button class="button button-primary" onclick="window.location.href='/pages/login.html'">Login</button>
+        <button class="button button-secondary" onclick="window.location.href='/pages/signup.html'">Sign Up</button>
       </div>
       <div class="menu-icon" onclick="toggleMenu()">
         <img src="/assets/icons/menu-icon.svg" alt="Menu Icon" />

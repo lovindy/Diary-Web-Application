@@ -1,10 +1,20 @@
 :root {
   --input-border-color: #ccc;
   --input-focus-border-color: #3498db;
+  --primary-color: #3498db;
+}
+
+.auth-container {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Authentication container */
-.auth-container {
+.auth {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -19,7 +29,7 @@
 }
 
 /* Aside styles */
-.auth-container aside {
+.auth aside {
   flex: 1 1 300px;
   padding: 20px;
 }
@@ -46,6 +56,33 @@
 .input-field:focus {
   border-color: var(--input-focus-border-color);
   outline: none;
+  animation: wave-animation 0.6s ease-in-out;
+}
+
+@keyframes wave-animation {
+  0%,
+  100% {
+    border-width: 1px;
+  }
+  50% {
+    border-width: 2px;
+  }
+}
+
+/* Text and link styles */
+.text {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.link:hover {
+  text-decoration: underline;
 }
 
 /* Image styles */
