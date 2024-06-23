@@ -1,68 +1,51 @@
-input[type="text"],
-input[type="date"],
-textarea {
-  padding: 8px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  width: 100%;
-  box-sizing: border-box;
-  background-color: var(--input-background-color);
-  color: var(--input-text-color);
+/* For the create and edit page */
+.create-container,
+.edit-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var();
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  color: var(--text-color);
+  font-weight: bold;
 }
 
-.container {
-  padding: 16px;
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
+  margin: 0;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  gap: 16px;
 }
 
 label {
-  font-weight: bold;
+  margin-bottom: 5px;
 }
 
-.content-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: calc(100vh - 64px); /* Adjust according to nav height */
-  padding: 20px;
-  background-color: var(--background-color);
-
-  color: var(--text-color);
+input,
+textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
-.create-header {
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: space-between;
-}
-
-.edit-container,
-.create-container {
-  background: var(--card-bg);
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px var(--shadow-color);
-  max-width: 800px;
-  width: 100%;
+textarea {
+  resize: vertical;
 }
 
 .error-message {
   color: red;
-  margin: 16px 0px 16px 0px;
-  font-size: 0.9em;
-  display: none; /* Initially hidden */
-}
-
-#editContainer,
-#createContainer {
-  margin-bottom: 20px;
-}
-
-#note {
-  margin: 6px 0px px 0px;
+  display: none;
+  font-size: 14px;
+  font-weight: normal;
+  margin-bottom: 8px;
 }

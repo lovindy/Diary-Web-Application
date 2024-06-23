@@ -1,17 +1,11 @@
-// import the reusable functions
 import { formatDate } from "./utils.js";
 
 // Function to update card in local storage
 function updateCardInLocalStorage(id, newTitle, newNote, newCategory, newDate) {
-  // Get cards from local storage
   const cards = JSON.parse(localStorage.getItem("cards")) || [];
-
-  // Find card by id
   const cardIndex = cards.findIndex((card) => card.id === id);
 
-  // Check if card exists, then update
   if (cardIndex !== -1) {
-    // Update card in local storage
     cards[cardIndex].title = newTitle;
     cards[cardIndex].note = newNote;
     cards[cardIndex].category = newCategory;
@@ -22,21 +16,12 @@ function updateCardInLocalStorage(id, newTitle, newNote, newCategory, newDate) {
 
 // Function to edit card
 window.addEventListener("load", () => {
-  // Get card id from URL
   const params = new URLSearchParams(window.location.search);
-
-  // Get card id from URL
   const id = params.get("id");
-
-  // Get cards from local storage
   const cards = JSON.parse(localStorage.getItem("cards")) || [];
-
-  // Find card by id
   const card = cards.find((card) => card.id === id);
 
-  // Check if card exists, then edit
   if (card) {
-    // Display card in edit form
     document.getElementById("editContainer").innerHTML = `
         <form id="editForm">
           <label for="title">Title:</label>
@@ -53,8 +38,8 @@ window.addEventListener("load", () => {
         </form>
       `;
 
-    // Add event listener to save button
-    document.getElementById("saveBtn").addEventListener("click", () => {
+    document.getElementById("saveBtn").addEventListener("click", (event) => {
+      event.preventDefault();
       const newTitle = document.getElementById("title").value;
       const newNote = document.getElementById("note").value;
       const newCategory = document.getElementById("category").value;

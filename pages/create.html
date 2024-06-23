@@ -9,26 +9,31 @@
   <body class="container">
     <!-- navigation component -->
     <nav-component></nav-component>
-    <!-- create form -->
     <div class="content-wrapper">
       <div class="create-container">
-        <header class="create-header">
+        <header>
           <h1 class="bebas-neue-regular">Create New Diary Note</h1>
           <img src="/assets/icons/Post-It--Streamline-Tokyo.svg" alt="" />
         </header>
 
-        <!-- input section -->
-        <div id="title-error" class="error-message"></div>
-        <input type="text" id="title" placeholder="Title" />
+        <div id="createContainer">
+          <form id="createForm">
+            <div id="title-error" class="error-message"></div>
+            <label for="title">Title:</label>
+            <input type="text" id="title" placeholder="Title" required />
 
-        <div id="note-error" class="error-message"></div>
-        <textarea id="note" placeholder="Note"></textarea>
+            <div id="note-error" class="error-message"></div>
+            <label for="note">Note:</label>
+            <textarea id="note" placeholder="Note" required></textarea>
 
-        <div id="category-error" class="error-message"></div>
-        <input type="text" id="category" placeholder="Category" />
+            <div id="category-error" class="error-message"></div>
+            <label for="category">Category:</label>
+            <input type="text" id="category" placeholder="Category" required />
 
-        <!-- button section -->
-        <button id="addCardBtn" class="button-primary">Save Note</button>
+            <button class="button-primary" id="addCardBtn">Save Note</button>
+          </form>
+        </div>
+
         <button
           onclick="window.location.href='./list.html'"
           class="button-primary"
