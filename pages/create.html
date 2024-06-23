@@ -7,22 +7,37 @@
     <link rel="stylesheet" href="/style.css" />
   </head>
   <body class="container">
+    <!-- navigation component -->
     <nav-component></nav-component>
-    <!-- header message for user -->
-    <h1 class="bebas-neue-regular title">Create New Note</h1>
-    <form id="createForm">
-      <label for="title">Title:</label>
-      <input type="text" id="title" required />
-      <label for="note">Note:</label>
-      <textarea id="note" required></textarea>
-      <label for="category">Category:</label>
-      <input type="text" id="category" required />
-      <button id="addCardBtn" class="button-primary">Add Note</button>
-    </form>
+    <!-- create form -->
+    <div class="content-wrapper">
+      <div class="create-container">
+        <header class="create-header">
+          <h1 class="bebas-neue-regular">Create New Diary Note</h1>
+          <img src="/assets/icons/Post-It--Streamline-Tokyo.svg" alt="" />
+        </header>
 
-    <button onclick="window.location.href='/pages/list.html'" class="button">
-      Back to Notes
-    </button>
+        <!-- input section -->
+        <div id="title-error" class="error-message"></div>
+        <input type="text" id="title" placeholder="Title" />
+
+        <div id="note-error" class="error-message"></div>
+        <textarea id="note" placeholder="Note"></textarea>
+
+        <div id="category-error" class="error-message"></div>
+        <input type="text" id="category" placeholder="Category" />
+
+        <!-- button section -->
+        <button id="addCardBtn" class="button-primary">Save Note</button>
+        <button
+          onclick="window.location.href='./list.html'"
+          class="button-primary"
+        >
+          Back to Notes
+        </button>
+      </div>
+    </div>
+
     <script type="module" src="/components/create.js"></script>
     <script src="/components/appearance.js"></script>
     <script src="/components/nav.js"></script>

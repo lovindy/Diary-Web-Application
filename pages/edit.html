@@ -5,22 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Diary - Edit Note</title>
     <link rel="stylesheet" href="/style.css" />
-    <link rel="stylesheet" href="../style/appearance.css" />
-    <link rel="stylesheet" href="../style/edit.css" />
-    <link rel="stylesheet" href="../style/nav.css" />
-    <link rel="stylesheet" href="../style/button.css" />
   </head>
   <body class="container">
+    <!-- navigation component -->
     <nav-component></nav-component>
-    <div class="edit-container">
-      <h1 class="bebas-neue-regular">Edit Diary Note</h1>
-      <div id="editContainer"></div>
-      <button
-        onclick="window.location.href='./list.html'"
-        class="button-primary"
-      >
-        Back to Notes
-      </button>
+    <div class="content-wrapper">
+      <div class="edit-container">
+        <header>
+          <h1 class="bebas-neue-regular">Edit Diary Note</h1>
+          <img src="/assets/icons/Update.svg" alt="" />
+        </header>
+
+        <div id="editContainer"></div>
+        <button
+          onclick="window.location.href='./list.html'"
+          class="button-secondary"
+        >
+          Back to Notes
+        </button>
+      </div>
     </div>
     <script type="module" src="/components/edit.js"></script>
     <script src="/components/appearance.js"></script>
