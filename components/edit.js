@@ -1,12 +1,7 @@
-// Function to format date to "yyyy-MM-dd"
-function formatDate(date) {
-  const d = new Date(date);
-  const month = String(d.getMonth() + 1).padStart(2, "0");
-  const day = String(d.getDate()).padStart(2, "0");
-  const year = d.getFullYear();
-  return `${year}-${month}-${day}`;
-}
+// import the reusable functions
+import { formatDate } from "./utils.js";
 
+// Function to update card in local storage
 function updateCardInLocalStorage(id, newTitle, newNote, newCategory, newDate) {
   const cards = JSON.parse(localStorage.getItem("cards")) || [];
   const cardIndex = cards.findIndex((card) => card.id === id);
@@ -19,12 +14,14 @@ function updateCardInLocalStorage(id, newTitle, newNote, newCategory, newDate) {
   }
 }
 
+// Function to edit card
 window.addEventListener("load", () => {
   const params = new URLSearchParams(window.location.search);
   const id = params.get("id");
   const cards = JSON.parse(localStorage.getItem("cards")) || [];
   const card = cards.find((card) => card.id === id);
 
+  // Check if card exists
   if (card) {
     document.getElementById("editContainer").innerHTML = `
         <form id="editForm">
@@ -42,6 +39,7 @@ window.addEventListener("load", () => {
         </form>
       `;
 
+    // Add event listener to save button
     document.getElementById("saveBtn").addEventListener("click", () => {
       const newTitle = document.getElementById("title").value;
       const newNote = document.getElementById("note").value;

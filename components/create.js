@@ -1,12 +1,6 @@
-// Function to format date to "yyyy-MM-dd"
-function formatDate(date) {
-  const d = new Date(date);
-  const month = String(d.getMonth() + 1).padStart(2, "0");
-  const day = String(d.getDate()).padStart(2, "0");
-  const year = d.getFullYear();
-  return `${year}-${month}-${day}`;
-}
+import { formatDate } from "./utils.js";
 
+// Function to save card to local storage
 function saveCardToLocalStorage(id, title, note, date, category) {
   const cards = JSON.parse(localStorage.getItem("cards")) || [];
   cards.push({ id, title, note, date, category });

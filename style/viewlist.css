@@ -32,10 +32,10 @@ header {
 
 .modal-content {
   background-color: var(--card-background-color);
-  padding: 20px;
+  padding: 16px 64px;
   border: 1px solid #888;
   width: 50%;
-  height: auto; 
+  height: auto;
   animation: slideIn 0.5s;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1); /* Added box-shadow for a professional look */
@@ -103,4 +103,3 @@ header {
     transform: translateY(0);
   }
 }
-

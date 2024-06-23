@@ -13,19 +13,17 @@
   <body class="container">
     <nav-component></nav-component>
     <div class="edit-container">
-      <h1 class="jolly-lodger-regular">Edit Diary Note</h1>
-      <button onclick="toggleDarkMode()" class="button">
-        Toggle Dark Mode
-      </button>
+      <h1 class="bebas-neue-regular">Edit Diary Note</h1>
       <div id="editContainer"></div>
       <button
-        onclick="window.location.href='../pages/list.html'"
-        class="button-primary">
+        onclick="window.location.href='./list.html'"
+        class="button-primary"
+      >
         Back to Notes
       </button>
     </div>
-    <script src="../components/edit.js"></script>
-    <script src="../components/appearance.js"></script>
-    <script src="../components/nav.js"></script>
+    <script type="module" src="/components/edit.js"></script>
+    <script src="/components/appearance.js"></script>
+    <script src="/components/nav.js"></script>
   </body>
 </html>
