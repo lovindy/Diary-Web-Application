@@ -4,29 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up</title>
-    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
     <div id="app" class="container">
-      <h1 class="title">Sign Up</h1>
-      <input
-        type="text"
-        id="signup-username"
-        placeholder="Username"
-        class="input-field"
-      />
-      <input
-        type="password"
-        id="signup-password"
-        placeholder="Password"
-        class="input-field"
-      />
-      <button id="signupBtn" class="btn btn-green">Sign Up</button>
-      <p class="text">
-        Already have an account?
-        <a href="login.html" class="link">Login</a>
-      </p>
+      <div class="auth-container">
+        <!-- signup form -->
+        <aside>
+          <h1 class="title">Sign Up</h1>
+          <input
+            type="text"
+            id="signup-username"
+            placeholder="Username"
+            class="input-field"
+          />
+          <input
+            type="password"
+            id="signup-password"
+            placeholder="Password"
+            class="input-field"
+          />
+          <button id="signupBtn" class="button-success">Sign Up</button>
+          <p class="text">
+            Already have an account?
+            <a href="login.html" class="link">Login</a>
+          </p>
+        </aside>
+        <!-- image design -->
+        <aside>
+          <img src="/assets/icons/Post-It--Streamline-Tokyo.svg" alt="" />
+        </aside>
+      </div>
     </div>
-    <script src="../../script.js"></script>
+    <script src="/script.js"></script>
   </body>
 </html>

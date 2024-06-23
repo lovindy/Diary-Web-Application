@@ -4,28 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
     <div id="app" class="container">
-      <h1 class="title">Login</h1>
-      <input
-        type="text"
-        id="login-username"
-        placeholder="Username"
-        class="input-field"
-      />
-      <input
-        type="password"
-        id="login-password"
-        placeholder="Password"
-        class="input-field"
-      />
-      <button id="loginBtn" class="primary-bg">Login</button>
-      <p class="text">
-        Don't have an account?
-        <a href="signup.html" class="link">Sign Up</a>
-      </p>
+      <div class="auth-container">
+        <!-- login form -->
+        <aside>
+          <h1 class="title">Login</h1>
+          <input
+            type="text"
+            id="login-username"
+            placeholder="Username"
+            class="input-field"
+          />
+          <input
+            type="password"
+            id="login-password"
+            placeholder="Password"
+            class="input-field"
+          />
+          <button id="loginBtn" class="button-primary">Login</button>
+          <p class="text">
+            Don't have an account?
+            <a href="signup.html" class="link">Sign Up</a>
+          </p>
+        </aside>
+        <!-- image design to -->
+        <aside>
+          <img src="/assets/icons/Post-It--Streamline-Tokyo.svg" alt="" />
+        </aside>
+      </div>
     </div>
     <script src="/script.js"></script>
   </body>
