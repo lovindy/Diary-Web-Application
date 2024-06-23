@@ -4,6 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Loading</title>
+    <link rel="stylesheet" href="/style.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="loading-container">
+      <img
+        class="giphy-gif-img giphy-img-loaded"
+        src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmh2ZWR1MDR6bXY0dG1ldGJtZjMwczYwbTJrd3B2eDF3OWZqd2hkdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/17mNCcKU1mJlrbXodo/giphy.gif"
+        style="background: transparent"
+        width="10%"
+        height="10%"
+        alt="loading symbol GIF"
+      />
+    </div>
+  </body>
+  <script>
+    // Redirect to index.html in 5s
+    document.addEventListener("DOMContentLoaded", () => {
+      setTimeout(() => {
+        window.location.href = "../index.html";
+      }, 8000); // Redirect after 5 seconds
+    });
+  </script>
 </html>

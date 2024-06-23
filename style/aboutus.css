@@ -1,0 +1,68 @@
+:root {
+  --background-color: #f4f4f4;
+  --text-color: #333;
+}
+
+body {
+  background-color: var(--background-color);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: var(--text-color);
+  font-family: Roboto, sans-serif;
+  padding: 16px;
+  transition: 0.5s;
+}
+
+.container {
+  max-width: 1440px;
+  padding: 16px;
+  margin: 0 auto;
+}
+
+/* Title style */
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-style: normal;
+  font-size: 64px;
+  transition-duration: 0.3s;
+}
+
+.about-us {
+  margin-top: 20px;
+}
+
+.about-us p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.team {
+  margin-top: 40px;
+}
+
+.team h2 {
+  font-size: 36px;
+}
+
+.team-member {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.team-member img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.team-member h3 {
+  font-size: 24px;
+}
+
+.team-member p {
+  font-size: 18px;
+  color: #555;
+}

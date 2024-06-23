@@ -2,10 +2,10 @@
 function createNavHTML() {
   const links = [
     { href: "../../index.html", text: "Home" },
-    { href: "#", text: "About Us" },
+    { href: "/pages/aboutus.html", text: "About Us" },
     { href: "/pages/list.html", text: "My Diary" },
     { href: "#", text: "Explore" },
-    { href: "#", text: "Plans" },
+    { href: "/pages/plan.html", text: "Plans" },
   ];
 
   // Create the navigation HTML

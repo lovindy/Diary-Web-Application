@@ -2,6 +2,7 @@
   --input-border-color: #ccc;
   --input-focus-border-color: #3498db;
   --primary-color: #3498db;
+  --error-color: #e74c3c; /* Error color */
 }
 
 .auth-container {
@@ -91,6 +92,13 @@
   max-width: 400px;
   display: block;
   margin: 0 auto;
+}
+
+/* Error message styles */
+.error-message {
+  color: var(--error-color);
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 /* Responsive design */
