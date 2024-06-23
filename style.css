@@ -19,12 +19,11 @@
 /* Button toggle dark and light mode */
 :root {
   --background-color: #212529;
+  --background-form-color: #343a40;
   --text-color: #ecf0f1;
   --date-color: #bdc3c7;
   --card-bg: rgba(255, 255, 255, 0.1);
   --card-background-color: #2c3e50;
-  --input-background-color: #ecf0f1;
-  --input-text-color: #2c3e50;
   --shadow-color: rgba(0, 0, 0, 0.2);
   --primary-bg: #55f2c3;
   --primary-color: black;
@@ -44,12 +43,11 @@
 /* light mode appearance */
 :root.light-mode {
   --background-color: #adb5bd;
+  --background-form-color: white;
   --text-color: #2c3e50;
   --date-color: white;
   --card-bg: rgba(255, 255, 255, 0.258);
   --card-background-color: white;
-  --input-background-color: #fff;
-  --input-text-color: #1b263b;
   --shadow-color: rgba(0, 0, 0, 0.1);
   --primary-bg: #003b7b;
   --primary-color: white;
@@ -70,6 +68,9 @@
 /* Body style apply to all the pages */
 body {
   background-color: var(--background-color);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
   color: var(--text-color);
   font-family: Roboto, sans-serif;
   padding: 16px;
