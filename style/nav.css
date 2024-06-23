@@ -1,4 +1,4 @@
-/* Define dark mode and light mode variables of the navigation*/
+/* Define dark mode and light mode variables */
 :root {
   --text-color: #ecf0f1;
   --nav-link-color: white;
@@ -25,7 +25,6 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 16px;
-  transition-duration: 0.3s;
   transition: transform 0.3s ease;
 }
 
@@ -44,8 +43,8 @@
 
 .nav-link {
   position: relative;
-  transition: transform 0.3s ease;
   color: var(--nav-link-color);
+  transition: transform 0.3s ease;
 }
 
 .nav-link:hover {
@@ -56,7 +55,6 @@
 .nav-buttons {
   display: flex;
   gap: 16px;
-  transition-duration: 0.3s;
 }
 
 .underline-animation {
@@ -84,28 +82,59 @@
 
 .menu-icon {
   display: none;
+  cursor: pointer;
+}
+.close-icon {
+  display: none;
 }
 
-/* Hide all the ul link and button in tablet screen */
+/* Hide navigation links and buttons in tablet screen */
 @media screen and (max-width: 1024px) {
-  .nav-links {
-    display: none;
-    transition-duration: 0.3s;
-  }
+  .nav-links,
   .nav-buttons {
     display: none;
     transition-duration: 0.3s;
   }
-  /* Display this menu-icon in the tablet screen */
+
+  .nav-links.open,
+  .nav-buttons.open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 250px;
+    background-color: var(
+      --background-color
+    ); /* Adjust background color if defined */
+    padding: 16px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transform: translateX(0);
+    transition: transform 0.3s ease;
+  }
+
+  .nav-links.open {
+    padding-top: 50px; /* To avoid overlapping with the logo */
+  }
+
+  .nav-links.closed,
+  .nav-buttons.closed {
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+  }
+
   .menu-icon {
     display: block;
   }
-}
 
-/* custom padding on the navigation in tablet screen */
-@media screen and (max-width: 1024px) {
-  .nav-container {
-    padding: 0 32px;
-    transition-duration: 0.3s;
+  .close-icon {
+    display: flex;
+    cursor: pointer;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 24px;
+    color: var(--nav-link-color);
   }
 }
