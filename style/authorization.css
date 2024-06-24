@@ -4,8 +4,14 @@
   --primary-color: #3498db;
   --primary-bg: #3498db;
   --primary-bg-hover: #2980b9;
-  --error-color: #e74c3c; /* Error color */
-  --text-color: #fff; /* Text color */
+  --error-color: #e74c3c;
+  --text-color: #fff;
+}
+
+.error-message {
+  color: var(--error-color);
+  display: none; /* Hide error messages by default */
+  text-align: start;
 }
 
 .auth-container {
@@ -172,6 +178,6 @@
 
 @media (max-width: 768px) {
   .auth {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 }
