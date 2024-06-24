@@ -8,16 +8,17 @@ function handleSignUp() {
   // Get user input
   const username = document.getElementById("signup-username").value;
   const password = document.getElementById("signup-password").value;
+  const email = document.getElementById("email-user").value;
 
   // Check if username and password are not empty
-  if (username && password) {
+  if (username && password && email) {
     const users = JSON.parse(localStorage.getItem("users")) || [];
     if (users.find((user) => user.username === username)) {
       alert("Username already exists");
       return;
     }
     // Add user to local storage
-    users.push({ username, password });
+    users.push({ username, password, email });
     localStorage.setItem("users", JSON.stringify(users));
     alert("Sign up successful! You can now log in.");
     navigateTo("../pages/login.html");
@@ -69,4 +70,3 @@ if (window.location.pathname.endsWith("signup.html")) {
 if (window.location.pathname.endsWith("login.html")) {
   document.getElementById("loginBtn").addEventListener("click", handleLogin);
 }
-
