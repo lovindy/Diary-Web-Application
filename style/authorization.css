@@ -13,17 +13,19 @@
   display: none; /* Hide error messages by default */
 }
 
-.success-message {
+.success-message img {
   color: var(--success-bg);
-  display: none; /* Hide success messages by default */
+  max-width: 50px;
 }
 
-.loading-contianer {
+.loading {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   width: 100%;
   height: 100vh;
+  margin: 0 auto;
 }
 
 .loading-circle {

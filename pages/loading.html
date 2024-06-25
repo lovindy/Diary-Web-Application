@@ -8,16 +8,24 @@
   </head>
   <body class="container">
     <div class="loading-container">
-      <img class="loading-man" src="/assets/images/loading-man-blue.gif" alt="" />
-      <img class="loading-circle" src="/assets/images/loading-animation.gif" alt="" />
+      <div class="loading">
+        <img
+          class="loading-man"
+          src="/assets/images/loading-man-blue.gif"
+          alt="" />
+        <img
+          class="loading-circle"
+          src="/assets/images/loading-animation.gif"
+          alt="" />
+      </div>
     </div>
   </body>
   <script>
-    // Redirect to index.html in 5s
+    // Redirect to home.html in 5s
     document.addEventListener("DOMContentLoaded", () => {
       setTimeout(() => {
         window.location.href = "/pages/home.html";
-      }, 8000); // Redirect after 5 seconds
+      }, 5000); // Redirect after 5 seconds
     });
   </script>
 </html>
