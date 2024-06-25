@@ -126,3 +126,5 @@ window.addEventListener("load", () => {
     cardsContainer.insertAdjacentHTML("beforeend", cardHTML);
   });
 });
+
+

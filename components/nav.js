@@ -16,7 +16,7 @@ function createNavHTML() {
       <!-- Link List to other pages -->
       <ul class="nav-links">
   `;
-  links.map((link) => {
+  links.forEach((link) => {
     navHTML += `<li class="nav-link"><a href="${link.href}" class="underline-animation">${link.text}</a></li>`;
   });
 
