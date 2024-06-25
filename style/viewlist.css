@@ -33,14 +33,15 @@ header {
 .modal-content {
   background-color: var(--card-background-color);
   padding: 16px 64px;
-  border: 1px solid #888;
-  width: 50%;
-  height: auto;
   animation: slideIn 0.5s;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1); /* Added box-shadow for a professional look */
-  border: 1px solid #ccc; /* Softer border color */
   text-align: center;
+  margin: 20% auto;
+  border: 1px solid #888;
+  width: 30%;
+  height: auto;
+  animation: slideIn 0.5s;
 }
 
 .modal-content img {
@@ -85,7 +86,6 @@ header {
   text-align: left;
 }
 
-/* Animation styles on modal */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -97,9 +97,27 @@ header {
 
 @keyframes slideIn {
   from {
-    transform: translateY(-50%);
+    transform: translateY(-50px);
   }
   to {
     transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50px);
   }
 }
