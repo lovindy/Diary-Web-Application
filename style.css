@@ -73,13 +73,11 @@ body {
   color: var(--text-color);
   font-family: Roboto, sans-serif;
   transition: 0.5s;
-}
-
-.container {
   max-width: 1440px;
   padding: 16px;
   margin: 0 auto;
 }
+
 
 /* Title style */
 .bebas-neue-regular {
