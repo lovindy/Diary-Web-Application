@@ -3,11 +3,15 @@ function navigateTo(url) {
   window.location.href = url;
 }
 
-// Function to show error messages
-function showError(message, errorElementId) {
+// Function to show error messages or images
+function showError(message, errorElementId, isImage = false) {
   const errorElement = document.getElementById(errorElementId);
   if (errorElement) {
-    errorElement.textContent = message;
+    if (isImage) {
+      errorElement.innerHTML = `<img src="/assets/images/loading-animation.gif" alt="Loading...">`;
+    } else {
+      errorElement.textContent = message;
+    }
     errorElement.style.display = "block";
   }
 }
@@ -65,8 +69,9 @@ function handleSignUp(event) {
     // Add user to local storage
     users.push({ username, password, email });
     localStorage.setItem("users", JSON.stringify(users));
-    showError("Sign up successful! You can now log in.", "signup-error");
-    setTimeout(() => navigateTo("../index.html"), 2000);
+    // Display loading GIF
+    showError("/assets/image/loading-animation.gif", "signup-success", true);
+    setTimeout(() => navigateTo("../index.html"), 3000);
   }
 }
 

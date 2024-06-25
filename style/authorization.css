@@ -11,7 +11,23 @@
 .error-message {
   color: var(--error-color);
   display: none; /* Hide error messages by default */
-  text-align: start;
+}
+
+.success-message {
+  color: var(--success-bg);
+  display: none; /* Hide success messages by default */
+}
+
+.loading-contianer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.loading-circle {
+  max-width: 50px;
 }
 
 .auth-container {
