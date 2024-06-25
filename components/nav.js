@@ -1,7 +1,7 @@
 // Function to create the navigation HTML
 function createNavHTML() {
   const links = [
-    { href: "../../index.html", text: "Home" },
+    { href: "/pages/home.html", text: "Home" },
     { href: "/pages/aboutus.html", text: "About Us" },
     { href: "/pages/list.html", text: "My Diary" },
     { href: "#", text: "Explore" },
@@ -27,7 +27,7 @@ function createNavHTML() {
         <button onclick="toggleDarkMode()" class="button button-secondary">
           Theme
         </button>
-        <button class="button button-primary" onclick="window.location.href='/pages/login.html'">Login</button>
+        <button class="button button-primary" onclick="window.location.href='../index.html'">Login</button>
         <button class="button button-secondary" onclick="window.location.href='/pages/signup.html'">Sign Up</button>
       </div>
       <div class="menu-icon" onclick="toggleMenu()">

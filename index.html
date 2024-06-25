@@ -3,43 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Diary - Notes</title>
-    <!-- import styles -->
+    <title>Login</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="container">
-    <!-- navigation component -->
-    <nav-component></nav-component>
-    <!-- hero section -->
-    <main class="content-container">
-      <div class="hero-section">
-        <!-- text-content -->
-        <div class="text-content">
-          <h1 class="bebas-neue-regular">DEVELOPER DIARY NOTE</h1>
-          <p>
-            A diary web application note is a digital platform designed to allow
-            users to record their thoughts, experiences, and reflections
-            conveniently.
+  <body>
+    <div id="app" class="auth-container">
+      <div class="auth">
+        <!-- Login form -->
+        <aside class="form-section">
+          <h1 class="title">Login</h1>
+          <div id="login-error" class="error-message"></div>
+          <!-- General error message -->
+          <div id="login-username-error" class="error-message"></div>
+          <!-- Username error message -->
+          <input
+            type="text"
+            id="login-username"
+            placeholder="Username"
+            class="input-field" />
+          <div id="login-password-error" class="error-message"></div>
+          <!-- Password error message -->
+          <input
+            type="password"
+            id="login-password"
+            placeholder="Password"
+            class="input-field" />
+          <button id="loginBtn" class="button-success">Login</button>
+          <p class="text">
+            Don't have an account?
+            <a href="/pages/signup.html" class="link">Sign Up</a>
           </p>
-          <a href="/pages/list.html"
-            ><button class="button-primary">Get Started</button></a
-          >
-        </div>
-        <!-- image -->
-        <div class="hero-image">
-          <img src="/assets/icons/Space-Dark-Mode.svg" alt="" />
-        </div>
+          <div class="third-party">
+            <button class="third-party-btn google">
+              <img src="/assets/icons/google.svg" alt="Google" />
+              <p>Login with Google</p>
+            </button>
+            <button class="third-party-btn facebook">
+              <img src="/assets/icons/facebook.svg" alt="Facebook" />
+              <p>Login with Facebook</p>
+            </button>
+          </div>
+        </aside>
+        <!-- Image design -->
+        <aside class="image-section">
+          <img src="/assets/icons/login.svg" alt="Login Illustration" />
+        </aside>
       </div>
-      <!-- user header -->
-      <header class="user-header">
-        <h1 class="bebas-neue-regular">Company Founder</h1>
-      </header>
-      <!-- user feedback card -->
-      <user-card-component></user-card-component>
-    </main>
+    </div>
+    <script src="/components/authorization.js"></script>
   </body>
-  <script src="script.js"></script>
-  <script src="/components/nav.js"></script>
-  <script src="/components/appearance.js"></script>
-  <script src="/components/user.js"></script>
 </html>

@@ -70,9 +70,6 @@
 /* Body style apply to all the pages */
 body {
   background-color: var(--background-color);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
   color: var(--text-color);
   font-family: Roboto, sans-serif;
   transition: 0.5s;
@@ -190,14 +187,6 @@ body {
 .user-feedback-card p {
   font-size: 14px;
   line-height: 1.6;
-}
-
-.content-container {
-  display: flex;
-  max-width: 1440px;
-  height: 1024px;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .user-header h1 {

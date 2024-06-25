@@ -66,7 +66,7 @@ function handleSignUp(event) {
     users.push({ username, password, email });
     localStorage.setItem("users", JSON.stringify(users));
     showError("Sign up successful! You can now log in.", "signup-error");
-    setTimeout(() => navigateTo("../pages/login.html"), 2000);
+    setTimeout(() => navigateTo("../index.html"), 2000);
   }
 }
 
@@ -105,7 +105,7 @@ function handleLogin(event) {
     // Check if user exists
     if (user) {
       localStorage.setItem("currentUser", JSON.stringify(user));
-      navigateTo("../pages/loading.html");
+      navigateTo("/pages/loading.html");
     } else {
       showError("Invalid username or password.", "login-error");
     }
@@ -128,6 +128,6 @@ if (window.location.pathname.endsWith("signup.html")) {
 }
 
 // Login page
-if (window.location.pathname.endsWith("login.html")) {
+if (window.location.pathname.endsWith("index.html")) {
   document.getElementById("loginBtn").addEventListener("click", handleLogin);
 }
