@@ -22,7 +22,7 @@ function createFooterHTML() {
             <a href="#"><img src="/assets/icons/Facebook.svg" alt="Facebook"></a>
             <a href="#"><img src="/assets/icons/twitter.svg" alt="Twitter"></a>
             <a href="#"><img src="/assets/icons/instagram.png" alt="Instagram"></a>
-            <a href="#"><img src="/assets/icons/linkedin.svg" alt="LinkedIn"></a>
+            <a href="#"><img src="/assets/icons/linkedin.png" alt="LinkedIn"></a>
           </div>`,
     },
   ];

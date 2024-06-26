@@ -1,12 +1,32 @@
 // Function to create the navigation HTML
-function createNavHTML() {
-  const links = [
-    { href: "/pages/home.html", text: "Home" },
-    { href: "/pages/aboutus.html", text: "About Us" },
-    { href: "/pages/list.html", text: "My Diary" },
-    { href: "#", text: "Explore" },
-    { href: "/pages/plan.html", text: "Plans" },
-  ];
+function createNavHTML(page) {
+  let links = [];
+  let buttons = "";
+
+  if (page === "home") {
+    links = [
+      { href: "/pages/home.html", text: "Home" },
+      { href: "/pages/aboutus.html", text: "About Us" },
+      { href: "/pages/list.html", text: "My Diary" },
+      { href: "#", text: "Explore" },
+      { href: "/pages/plan.html", text: "Plans" },
+    ];
+    buttons = `
+      <div class="nav-buttons closed">
+        <button onclick="toggleDarkMode()" class="button button-secondary">
+          Theme
+        </button>
+        <button class="button button-primary" onclick="window.location.href='../index.html'">Log Out</button>
+        <button class="button button-secondary" onclick="window.location.href='/pages/signup.html'">Sign Up</button>
+      </div>
+    `;
+  } else if (page === "other") {
+    links = [
+      { href: "/pages/aboutus.html", text: "About Us" },
+      { href: "#", text: "Explore" },
+      { href: "/pages/plan.html", text: "Plans" },
+    ];
+  }
 
   // Create the navigation HTML
   let navHTML = `
@@ -14,26 +34,36 @@ function createNavHTML() {
       <!-- Logo -->
       <div class="logo"><img src="/assets/icons/Diary.svg" alt="Diary Logo" /></div>
       <!-- Link List to other pages -->
-      <ul class="nav-links">
+      <ul class="nav-links closed">
   `;
   links.forEach((link) => {
     navHTML += `<li class="nav-link"><a href="${link.href}" class="underline-animation">${link.text}</a></li>`;
   });
 
-  // Add the login and signup buttons
   navHTML += `
       </ul>
-      <div class="nav-buttons">
-        <button onclick="toggleDarkMode()" class="button button-secondary">
-          Theme
-        </button>
-        <button class="button button-primary" onclick="window.location.href='../index.html'">Login</button>
-        <button class="button button-secondary" onclick="window.location.href='/pages/signup.html'">Sign Up</button>
-      </div>
+      ${buttons}
       <div class="menu-icon" onclick="toggleMenu()">
         <img src="/assets/icons/menu-icon.svg" alt="Menu Icon" />
       </div>
-      <div class="close-icon" onclick="toggleMenu()">x</div>
+      <div class="menu-content closed">
+        <div class="close-icon" onclick="toggleMenu()">
+          <span>&times;</span>
+        </div>
+        <ul class="menu-links">
+          ${links
+            .map(
+              (link) =>
+                `<li class="menu-link"><a href="${link.href}" class="underline-animation">${link.text}</a></li>`
+            )
+            .join("")}
+          ${
+            page === "home"
+              ? '<li class="menu-link"><a href="/pages/logout.html" class="underline-animation">Log Out</a></li>'
+              : ""
+          }
+        </ul>
+      </div>
     </nav>
   `;
   return navHTML;
@@ -42,26 +72,23 @@ function createNavHTML() {
 // Define the custom element
 class NavComponent extends HTMLElement {
   connectedCallback() {
-    this.innerHTML = createNavHTML();
+    // Determine the page type and create the appropriate navigation
+    const pageType = this.getAttribute("page-type");
+    this.innerHTML = createNavHTML(pageType);
   }
 }
 
 // Register the custom element
 customElements.define("nav-component", NavComponent);
 
-// Add the toggleMenu function
+// Add the toggleMenu function to handle the sliding animation
 function toggleMenu() {
-  const navLinks = document.querySelector(".nav-links");
-  const navButtons = document.querySelector(".nav-buttons");
-  if (navLinks.classList.contains("open")) {
-    navLinks.classList.remove("open");
-    navLinks.classList.add("closed");
-    navButtons.classList.remove("open");
-    navButtons.classList.add("closed");
+  const menuContent = document.querySelector(".menu-content");
+  if (menuContent.classList.contains("closed")) {
+    menuContent.classList.remove("closed");
+    menuContent.classList.add("open");
   } else {
-    navLinks.classList.remove("closed");
-    navLinks.classList.add("open");
-    navButtons.classList.remove("closed");
-    navButtons.classList.add("open");
+    menuContent.classList.remove("open");
+    menuContent.classList.add("closed");
   }
 }
