@@ -122,6 +122,10 @@ header {
   flex-direction: column;
 }
 
+.view-diary {
+  text-align: center;
+}
+
 .hero-section-view {
   display: flex;
   justify-content: center;

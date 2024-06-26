@@ -95,6 +95,12 @@ body {
   margin-top: 64px;
 }
 
+.hero-section img{
+  width: 100%;
+  max-width: 500px;
+  transition: 0.3s;
+}
+
 .text-content {
   max-width: 500px;
   padding: 16px;
