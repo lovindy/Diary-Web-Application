@@ -42,11 +42,12 @@
 
 .nav-link {
   color: var(--nav-link-color);
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .nav-link:hover {
   color: var(--nav-link-hover-color);
+  transform: scale(1.1);
 }
 
 .nav-buttons {
@@ -64,8 +65,8 @@
   content: "";
   position: absolute;
   width: 0;
-  height: 2px;
-  bottom: 0;
+  height: 1px; /* Thinner underline */
+  bottom: -3px; /* Offset from the link */
   left: 0;
   background-color: var(--underline-color);
   visibility: hidden;
@@ -132,8 +133,44 @@
 .menu-link a {
   color: var(--nav-link-color);
   text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+  position: relative;
+}
+
+.menu-link a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px; /* Thinner underline */
+  bottom: -3px; /* Offset from the link */
+  left: 0;
+  background-color: var(--underline-color);
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-link a:hover::before {
+  visibility: visible;
+  width: 100%;
 }
 
 .menu-link a:hover {
   color: var(--nav-link-hover-color);
+  transform: scale(1.1);
+}
+
+/* Responsive styles for max-width of 1024px */
+@media (max-width: 1024px) {
+  .nav-links,
+  .nav-buttons {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .menu-content {
+    display: block;
+  }
 }
