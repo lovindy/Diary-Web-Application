@@ -10,19 +10,19 @@ function createFooterHTML() {
       content: `
           <ul>
             <li><a href="/home.html">Home</a></li>
-            <li><a href="/about.html">About</a></li>
-            <li><a href="/contact.html">Contact</a></li>
-            <li><a href="/privacy.html">Privacy Policy</a></li>
+            <li><a href="/pages/aboutus.html">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="">Privacy Policy</a></li>
           </ul>`,
     },
     {
       title: "Follow Us",
       content: `
           <div class="social-icons">
-            <a href="#"><img src="/images/facebook-icon.png" alt="Facebook"></a>
-            <a href="#"><img src="/images/twitter-icon.png" alt="Twitter"></a>
-            <a href="#"><img src="/images/instagram-icon.png" alt="Instagram"></a>
-            <a href="#"><img src="/images/linkedin-icon.png" alt="LinkedIn"></a>
+            <a href="#"><img src="/assets/icons/Facebook.svg" alt="Facebook"></a>
+            <a href="#"><img src="/assets/icons/twitter.svg" alt="Twitter"></a>
+            <a href="#"><img src="/assets/icons/instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="/assets/icons/linkedin.svg" alt="LinkedIn"></a>
           </div>`,
     },
   ];
@@ -44,7 +44,7 @@ function createFooterHTML() {
   footerHTML += `
         </div>
         <div class="footer-bottom">
-          <p>&copy; 2024 Your Diary. All rights reserved.</p>
+          <p>&copy; 2024 DEV Diary. All rights reserved.</p>
         </div>
       </footer>
     `;

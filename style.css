@@ -95,7 +95,7 @@ body {
   margin-top: 64px;
 }
 
-.hero-section img{
+.hero-section img {
   width: 100%;
   max-width: 500px;
   transition: 0.3s;
@@ -225,6 +225,14 @@ body {
   }
   .bebas-neue-regular {
     font-size: 48px;
+  }
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column {
+    margin: 16px 0;
   }
 }
 
