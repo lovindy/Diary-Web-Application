@@ -179,26 +179,7 @@
 }
 
 /* Show overlay when menu-content is open */
+/* the ~ is a sibling selector */
 .menu-content.open ~ .overlay {
   display: block;
-}
-
-/* Responsive styles for max-width of 1024px */
-@media (max-width: 1024px) {
-  .nav-links,
-  .nav-buttons {
-    display: none;
-  }
-
-  .menu-icon {
-    display: block;
-  }
-
-  .menu-content {
-    display: block;
-  }
-
-  .overlay {
-    display: block;
-  }
 }

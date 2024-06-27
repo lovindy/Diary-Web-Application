@@ -7,41 +7,62 @@
     <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
-    <!-- Navigation Component -->
+    <!-- Navigation -->
     <nav-component page-type="home"></nav-component>
-    <header>
-      <h1 class="bebas-neue-regular">About Us</h1>
-    </header>
+
     <!-- Hero Section -->
-    <section> 
-      <div>
-        <img src="/assets/images/About-Us.png" alt="">
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="bebas-neue-regular">About Us</h1>
+        <p>Discover more about our company, our team, and what drives us.</p>
+      </div>
+      <div class="hero-image">
+        <img src="/assets/images/About-Us.png" alt="About Us Hero" />
       </div>
     </section>
+
     <!-- About Us Section -->
     <section class="about-us">
+      <h2>Our Company</h2>
       <p>
         Welcome to our company! We are dedicated to providing the best service
         to our customers. Our team is composed of experienced professionals who
         are passionate about their work. We value integrity, excellence, and
         innovation.
       </p>
-      <div class="team">
-        <h2>Our Team</h2>
-        <div class="team-member">
-          <img src="/assets/images/User-1.png" alt="Team Member 1" />
-          <h3>Team Member 1</h3>
-          <p>Position</p>
-        </div>
-        <div class="team-member">
-          <img src="/assets/images/User-2.png" alt="Team Member 2" />
-          <h3>Team Member 2</h3>
-          <p>Position</p>
-        </div>
-        <!-- Add more team members as needed -->
-      </div>
     </section>
+
+    <!-- Our Team Section -->
+    <section class="team">
+      <h2>Our Team</h2>
+      <div class="team-member">
+        <img src="/assets/images/User-1.png" alt="Team Member 1" />
+        <h3>Team Member 1</h3>
+        <p>Position</p>
+      </div>
+      <div class="team-member">
+        <img src="/assets/images/User-2.png" alt="Team Member 2" />
+        <h3>Team Member 2</h3>
+        <p>Position</p>
+      </div>
+      <!-- Add more team members as needed -->
+    </section>
+
+    <!-- More Sections -->
+    <section class="values">
+      <h2>Our Values</h2>
+      <p>We believe in integrity, excellence, and innovation.</p>
+    </section>
+
+    <section class="mission">
+      <h2>Our Mission</h2>
+      <p>
+        To provide outstanding service and solutions through dedication and
+        excellence.
+      </p>
+    </section>
+
+    <script src="/components/appearance.js"></script>
+    <script src="/components/nav.js"></script>
   </body>
-  <script src="/components/appearance.js"></script>
-  <script src="/components/nav.js"></script>
 </html>

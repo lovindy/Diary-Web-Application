@@ -271,6 +271,22 @@ body {
     padding: 16px;
     transition-duration: 0.3s;
   }
+  .nav-links,
+  .nav-buttons {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .menu-content {
+    display: block;
+  }
+
+  .overlay {
+    display: block;
+  }
 }
 
 /* Media queries for responsive design in mobile */

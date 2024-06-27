@@ -1,38 +1,72 @@
-.about-us {
-  margin-top: 20px;
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/assets/icons/Hero-Background.svg") no-repeat center center/cover;
+  color: white;
+  height: 70vh;
 }
 
-.about-us p {
-  font-size: 18px;
-  line-height: 1.6;
+.hero-content {
+  max-width: 50%;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.about-us,
+.team,
+.values,
+.mission {
+  padding: 2rem;
+  background-color: var(--background-color);
+  margin: 1rem 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 .team {
-  margin-top: 40px;
-}
-
-.team h2 {
-  font-size: 36px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .team-member {
-  margin-top: 20px;
-  display: flex;
-  align-items: center;
+  text-align: center;
+  margin: 1rem;
+  max-width: 200px;
 }
 
 .team-member img {
-  width: 100px;
-  height: 100px;
+  width: 100%;
   border-radius: 50%;
-  margin-right: 20px;
+  margin-bottom: 1rem;
 }
 
 .team-member h3 {
-  font-size: 24px;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
 }
 
 .team-member p {
-  font-size: 18px;
-  color: #555;
+  font-size: 1rem;
+  color: #777;
 }
