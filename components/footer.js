@@ -9,7 +9,7 @@ function createFooterHTML() {
       title: "Quick Links",
       content: `
           <ul>
-            <li><a href="/home.html">Home</a></li>
+            <li><a href="/pages/home.html">Home</a></li>
             <li><a href="/pages/aboutus.html">About</a></li>
             <li><a href="#">Contact</a></li>
             <li><a href="">Privacy Policy</a></li>

@@ -72,7 +72,7 @@
 body {
   background-color: var(--background-color);
   color: var(--text-color);
-  font-family: Roboto, sans-serif;
+  font-family: "Roboto", sans-serif;
   transition: 0.5s;
   max-width: 1440px;
   padding: 16px;
@@ -121,6 +121,7 @@ body {
   grid-template-columns: repeat(4, 2fr);
   gap: 16px;
   padding: 16px;
+  margin: 32px 0px;
 }
 
 /* User feedback card implement the animation move in from the bottom */
@@ -198,6 +199,17 @@ body {
   margin: 64px 32px 0;
 }
 
+/* card alignment with grid column with 3 and next card will go down*/
+#cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 16px 0;
+  gap: 16px;
+  padding: 16px 0;
+  transition-duration: 0.3s;
+  align-items: start;
+}
+
 /* Media queries for responsive design in tablets */
 @media screen and (max-width: 1024px) {
   .hero-section {
@@ -246,6 +258,20 @@ body {
   .menu-content {
     display: block;
   }
+  /* Card container in viewlist */
+  #cardsContainer {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 16px;
+    transition-duration: 0.3s;
+  }
+  .form-container {
+    padding: 16px;
+    transition-duration: 0.3s;
+  }
+  h1 {
+    padding: 16px;
+    transition-duration: 0.3s;
+  }
 }
 
 /* Media queries for responsive design in mobile */
@@ -253,5 +279,19 @@ body {
   .user-card-container {
     grid-template-columns: repeat(1, 3fr);
     margin-top: 0;
+  }
+  /* Card container in viewlist */
+  #cardsContainer {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 16px;
+    transition-duration: 0.3s;
+  }
+  .form-container {
+    padding: 16px;
+    transition-duration: 0.3s;
+  }
+  h1 {
+    padding: 16px;
+    transition-duration: 0.3s;
   }
 }

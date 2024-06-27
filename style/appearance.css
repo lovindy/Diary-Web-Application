@@ -15,8 +15,9 @@
 
 header {
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
 }
 
 header h1 {
@@ -45,7 +46,6 @@ textarea {
 }
 
 .error-message {
-  color: red;
   display: none;
   font-size: 14px;
   font-weight: normal;
@@ -113,13 +113,6 @@ textarea {
 .card-footer {
   display: flex;
   justify-content: space-between;
-}
-
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 
 .view-diary {
@@ -240,50 +233,5 @@ header {
   }
   to {
     transform: translateY(-50px);
-  }
-}
-
-/* card alignment with grid column with 3 and next card will go down*/
-#cardsContainer {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  margin: 16px 0;
-  gap: 16px;
-  padding: 16px 0;
-  transition-duration: 0.3s;
-  align-items: start;
-}
-
-/* Create Responsive for tablet screen on the grid card */
-@media screen and (max-width: 1024px) {
-  #cardsContainer {
-    grid-template-columns: repeat(2, 1fr);
-    padding: 16px;
-    transition-duration: 0.3s;
-  }
-  .form-container {
-    padding: 16px;
-    transition-duration: 0.3s;
-  }
-  h1 {
-    padding: 16px;
-    transition-duration: 0.3s;
-  }
-}
-
-/* Create Responsive for mobile screen on the grid card */
-@media screen and (max-width: 768px) {
-  #cardsContainer {
-    grid-template-columns: repeat(1, 1fr);
-    padding: 16px;
-    transition-duration: 0.3s;
-  }
-  .form-container {
-    padding: 16px;
-    transition-duration: 0.3s;
-  }
-  h1 {
-    padding: 16px;
-    transition-duration: 0.3s;
   }
 }
