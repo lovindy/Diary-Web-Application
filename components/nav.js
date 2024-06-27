@@ -59,12 +59,12 @@ function createNavHTML(page) {
             .join("")}
           ${
             page === "home"
-              ? '<li class="menu-link"><a href="../index.html" class="underline-animation">Log Out</a></li>'
+              ? '<li class="menu-link"><a onclick="toggleDarkMode()" class="theme-menu underline-animation">Theme</a></li>'
               : ""
           }
           ${
             page === "home"
-              ? '<li class="menu-link"><a onclick="toggleDarkMode()" class="theme-menu underline-animation">Theme</a></li>'
+              ? '<li class="menu-link"><a href="../index.html" class="underline-animation">Log Out</a></li>'
               : ""
           }
         </ul>
@@ -91,6 +91,7 @@ class NavComponent extends HTMLElement {
       const menuContent = document.querySelector(".menu-content");
       const menuIcon = document.querySelector(".menu-icon");
 
+      // Close the menu if the user clicks outside the menu content
       if (
         !menuContent.contains(event.target) &&
         !menuIcon.contains(event.target) &&
@@ -105,6 +106,7 @@ class NavComponent extends HTMLElement {
       const menuContent = document.querySelector(".menu-content");
       const overlay = document.querySelector(".overlay");
 
+      // Only toggle menu if screen width is <= 1024px
       if (window.innerWidth > 1024) {
         menuContent.classList.remove("open");
         menuContent.classList.add("closed");
