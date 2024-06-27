@@ -86,7 +86,7 @@ class MissionSection extends HTMLElement {
   }
 }
 
-// Define the custom elements
+// Define the custom elements to be used in the web component
 customElements.define("hero-section", HeroSection);
 customElements.define("about-us-section", AboutUsSection);
 customElements.define("team-section", TeamSection);
