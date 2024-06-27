@@ -9,6 +9,7 @@ function formatDate(date) {
 
 // Function to create the card HTML
 function createCardHTML(id, title, note, date, category) {
+  // Format the date
   const formattedDate = formatDate(date);
   // Truncate the note if it is longer than 15 characters
   const truncatedNote =
@@ -35,6 +36,7 @@ function createCardHTML(id, title, note, date, category) {
 function showModal(modalId, card) {
   const modal = document.getElementById(modalId);
   if (modalId === "modal") {
+    // Show modal with card details
     document.getElementById("modalTitle").textContent = card.title;
     document.getElementById("modalDate").textContent = formatDate(card.date);
     document.getElementById("modalNote").textContent = card.note;
@@ -47,6 +49,7 @@ function showModal(modalId, card) {
 
 // Function to close modal
 function closeModal(modalId) {
+  // Hide modal
   const modal = document.getElementById(modalId);
   const modalContent = modal.querySelector(".modal-content");
   modalContent.style.animation = "scaleOut 0.5s, fadeOut 0.5s";
@@ -60,12 +63,15 @@ function closeModal(modalId) {
 document.getElementById("modalClose").onclick = function () {
   closeModal("modal");
 };
+
+// Delete modal
 document.getElementById("deleteModalClose").onclick = function () {
   closeModal("deleteModal");
 };
 
 // Close modal when clicking outside the modal content
 window.onclick = function (event) {
+  // Close modal when clicking outside the modal content
   const editModal = document.getElementById("modal");
   const deleteModal = document.getElementById("deleteModal");
   if (event.target === editModal) {
@@ -77,8 +83,10 @@ window.onclick = function (event) {
 
 // Add event listener for card clicks
 document.getElementById("cardsContainer").addEventListener("click", (event) => {
+  // Close modal when clicking on a card
   const cardElement = event.target.closest(".card");
   if (cardElement && !event.target.classList.contains("button-danger")) {
+    // Get card ID
     const cardId = cardElement.getAttribute("data-id");
     const cards = JSON.parse(localStorage.getItem("cards")) || [];
     const card = cards.find((c) => c.id == cardId);
@@ -90,18 +98,24 @@ document.getElementById("cardsContainer").addEventListener("click", (event) => {
 
 // Show delete modal
 function showDeleteModal(cardId) {
+  // Show delete modal
   const deleteModal = document.getElementById("deleteModal");
+  // Get card ID
   deleteModal.setAttribute("data-id", cardId);
   deleteModal.style.display = "block";
 }
 
 // Confirm delete
 document.getElementById("confirmDeleteButton").onclick = function () {
+  // Remove card from local storage
   const deleteModal = document.getElementById("deleteModal");
   const cardId = deleteModal.getAttribute("data-id");
   const cards = JSON.parse(localStorage.getItem("cards")) || [];
+  // Get card from local storage
   const updatedCards = cards.filter((c) => c.id != cardId);
+  // Update local storage
   localStorage.setItem("cards", JSON.stringify(updatedCards));
+  // Remove card from local storage
   document.querySelector(`[data-id="${cardId}"]`).remove();
   closeModal("deleteModal");
 };
@@ -113,8 +127,11 @@ document.getElementById("cancelDeleteButton").onclick = function () {
 
 // Load cards from local storage on page load
 window.addEventListener("load", () => {
+  // Get cards from local storage
   const cards = JSON.parse(localStorage.getItem("cards")) || [];
+  // Insert cards into DOM
   const cardsContainer = document.getElementById("cardsContainer");
+  // Insert cards into DOM
   cards.forEach((card) => {
     const cardHTML = createCardHTML(
       card.id,
@@ -126,5 +143,3 @@ window.addEventListener("load", () => {
     cardsContainer.insertAdjacentHTML("beforeend", cardHTML);
   });
 });
-
-
