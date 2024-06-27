@@ -137,7 +137,7 @@ textarea {
 }
 
 .modal-content {
-  background-color: var(--card-background-color);
+  background-color: var(--primary-hover-bg);
   padding: 16px 64px;
   animation: slideIn 0.5s;
   border-radius: 10px;

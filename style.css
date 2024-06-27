@@ -23,7 +23,7 @@
 :root {
   --background-color: #212529;
   --background-form-color: #343a40;
-  --text-color: #ecf0f1;
+  --text-color: white;
   --date-color: #bdc3c7;
   --card-bg: rgba(255, 255, 255, 0.1);
   --card-border: 1px solid rgba(255, 255, 255, 0.2);
