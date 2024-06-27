@@ -26,7 +26,8 @@
   --text-color: #ecf0f1;
   --date-color: #bdc3c7;
   --card-bg: rgba(255, 255, 255, 0.1);
-  --card-background-color: #2c3e50;
+  --card-border: 1px solid rgba(255, 255, 255, 0.2);
+  --footer-border: rgba(255, 255, 255, 0.1);
   --shadow-color: rgba(0, 0, 0, 0.2);
   --primary-bg: #55f2c3;
   --primary-color: black;
@@ -45,12 +46,13 @@
 
 /* light mode appearance */
 :root.light-mode {
-  --background-color: #adb5bd;
+  --background-color: white;
   --background-form-color: white;
   --text-color: #2c3e50;
   --date-color: white;
   --card-bg: rgba(255, 255, 255, 0.258);
-  --card-background-color: white;
+  --card-border: 1px solid rgba(5, 51, 107, 0.41);
+  --footer-border: rgba(0, 37, 102, 0.224);
   --shadow-color: rgba(0, 0, 0, 0.1);
   --primary-bg: #003b7b;
   --primary-color: white;
@@ -130,7 +132,7 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 8px var(--shadow-color);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: var(--card-border);
   color: var(--text-color);
   display: flex;
   flex-direction: column;
