@@ -27,7 +27,6 @@
   --date-color: #bdc3c7;
   --card-bg: rgba(255, 255, 255, 0.1);
   --card-border: 1px solid rgba(255, 255, 255, 0.2);
-  --footer-border: rgba(255, 255, 255, 0.1);
   --shadow-color: rgba(0, 0, 0, 0.2);
   --primary-bg: #55f2c3;
   --primary-color: black;
@@ -52,7 +51,6 @@
   --date-color: white;
   --card-bg: rgba(255, 255, 255, 0.258);
   --card-border: 1px solid rgba(5, 51, 107, 0.41);
-  --footer-border: rgba(0, 37, 102, 0.224);
   --shadow-color: rgba(0, 0, 0, 0.1);
   --primary-bg: #003b7b;
   --primary-color: white;
