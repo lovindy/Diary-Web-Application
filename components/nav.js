@@ -59,7 +59,7 @@ function createNavHTML(page) {
             .join("")}
           ${
             page === "home"
-              ? '<li class="menu-link"><a href="/pages/logout.html" class="underline-animation">Log Out</a></li>'
+              ? '<li class="menu-link"><a href="../index.html" class="underline-animation">Log Out</a></li>'
               : ""
           }
         </ul>
@@ -77,11 +77,14 @@ class NavComponent extends HTMLElement {
     const pageType = this.getAttribute("page-type");
     this.innerHTML = createNavHTML(pageType);
 
+    // Hide the overlay on page load
+    const overlay = document.querySelector(".overlay");
+    overlay.style.display = "none";
+
     // Add event listener to handle clicks outside the menu content
     document.addEventListener("click", (event) => {
       const menuContent = document.querySelector(".menu-content");
       const menuIcon = document.querySelector(".menu-icon");
-      const overlay = document.querySelector(".overlay");
 
       if (
         !menuContent.contains(event.target) &&
@@ -89,6 +92,18 @@ class NavComponent extends HTMLElement {
         menuContent.classList.contains("open")
       ) {
         toggleMenu();
+      }
+    });
+
+    // Ensure overlay is hidden when resizing the window
+    window.addEventListener("resize", () => {
+      const menuContent = document.querySelector(".menu-content");
+      const overlay = document.querySelector(".overlay");
+
+      if (window.innerWidth > 1024) {
+        menuContent.classList.remove("open");
+        menuContent.classList.add("closed");
+        overlay.style.display = "none"; // Hide overlay
       }
     });
   }
@@ -102,13 +117,16 @@ function toggleMenu() {
   const menuContent = document.querySelector(".menu-content");
   const overlay = document.querySelector(".overlay");
 
-  if (menuContent.classList.contains("closed")) {
-    menuContent.classList.remove("closed");
-    menuContent.classList.add("open");
-    overlay.style.display = "block"; // Show overlay
-  } else {
-    menuContent.classList.remove("open");
-    menuContent.classList.add("closed");
-    overlay.style.display = "none"; // Hide overlay
+  // Only toggle menu if screen width is <= 1024px
+  if (window.innerWidth <= 1024) {
+    if (menuContent.classList.contains("closed")) {
+      menuContent.classList.remove("closed");
+      menuContent.classList.add("open");
+      overlay.style.display = "block"; // Show overlay
+    } else {
+      menuContent.classList.remove("open");
+      menuContent.classList.add("closed");
+      overlay.style.display = "none"; // Hide overlay
+    }
   }
 }
