@@ -62,6 +62,11 @@ function createNavHTML(page) {
               ? '<li class="menu-link"><a href="../index.html" class="underline-animation">Log Out</a></li>'
               : ""
           }
+          ${
+            page === "home"
+              ? '<li class="menu-link"><a onclick="toggleDarkMode()" class="theme-menu underline-animation">Theme</a></li>'
+              : ""
+          }
         </ul>
       </div>
     </nav>

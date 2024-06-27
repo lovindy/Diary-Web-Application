@@ -1,12 +1,28 @@
+:root {
+  --linear-teal: linear-gradient(rgba(0, 0, 0, 0.5), rgba(34, 67, 66, 0.5));
+}
+/* light mode root */
+:root.light-mode {
+  --linear-teal: linear-gradient(rgba(0, 0, 0, 0.5), rgba(149, 153, 152, 0.5));
+}
+
 .hero {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("/assets/icons/Hero-Background.svg") no-repeat center center/cover;
+  padding: 32px;
+  background: var(--linear-teal),
+    url("/assets/icons/moon.jpg") no-repeat center center/cover;
   color: white;
   height: 70vh;
+  border-radius: 16px;
+  margin-top: 32px;
+}
+
+.hero-content,
+.hero-image {
+  /* flex 1 is used to make the element take up 50% of the available space */
+  flex: 1;
 }
 
 .hero-content {
@@ -14,12 +30,12 @@
 }
 
 .hero-content h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  font-size: 48px;
+  margin-bottom: 16px;
 }
 
 .hero-content p {
-  font-size: 1.2rem;
+  font-size: 16px;
 }
 
 .hero-image img {
@@ -31,42 +47,42 @@
 .team,
 .values,
 .mission {
-  padding: 2rem;
-  background-color: var(--background-color);
-  margin: 1rem 0;
+  padding: 32px;
+  background-color: var(--card-bg);
+  margin: 16px 0;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 32px;
+  margin-bottom: 16px;
 }
 
 .team {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .team-member {
   text-align: center;
-  margin: 1rem;
+  margin: 16px;
   max-width: 200px;
 }
 
 .team-member img {
-  width: 100%;
+  max-width: 200px;
   border-radius: 50%;
-  margin-bottom: 1rem;
+  margin-bottom: 16px;
 }
 
 .team-member h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
+  font-size: 16px;
+  margin-bottom: 8px;
 }
 
 .team-member p {
-  font-size: 1rem;
+  font-size: 16px;
   color: #777;
 }

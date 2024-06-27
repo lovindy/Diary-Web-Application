@@ -183,3 +183,7 @@
 .menu-content.open ~ .overlay {
   display: block;
 }
+
+.theme-menu {
+  cursor: pointer;
+}
