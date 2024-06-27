@@ -5,7 +5,9 @@ function navigateTo(url) {
 
 // Function to show error messages or images
 function showError(message, errorElementId, isImage = false) {
+  // Check if error element exists
   const errorElement = document.getElementById(errorElementId);
+  // Show error message
   if (errorElement) {
     if (isImage) {
       errorElement.innerHTML = `<img src="/assets/images/loading-animation.gif" alt="Loading...">`;
@@ -40,6 +42,7 @@ function handleSignUp(event) {
   const password = document.getElementById("signup-password").value;
   const email = document.getElementById("email-user").value;
 
+  // Validate input
   let valid = true;
 
   // Check if username is empty
@@ -88,6 +91,7 @@ function handleLogin(event) {
   const username = document.getElementById("login-username").value;
   const password = document.getElementById("login-password").value;
 
+  // Validate input
   let valid = true;
 
   // Check if username is empty
