@@ -65,6 +65,7 @@ function createNavHTML(page) {
         </ul>
       </div>
     </nav>
+    <div class="overlay" onclick="toggleMenu()"></div>
   `;
   return navHTML;
 }
@@ -75,20 +76,39 @@ class NavComponent extends HTMLElement {
     // Determine the page type and create the appropriate navigation
     const pageType = this.getAttribute("page-type");
     this.innerHTML = createNavHTML(pageType);
+
+    // Add event listener to handle clicks outside the menu content
+    document.addEventListener("click", (event) => {
+      const menuContent = document.querySelector(".menu-content");
+      const menuIcon = document.querySelector(".menu-icon");
+      const overlay = document.querySelector(".overlay");
+
+      if (
+        !menuContent.contains(event.target) &&
+        !menuIcon.contains(event.target) &&
+        menuContent.classList.contains("open")
+      ) {
+        toggleMenu();
+      }
+    });
   }
 }
 
 // Register the custom element
 customElements.define("nav-component", NavComponent);
 
-// Add the toggleMenu function to handle the sliding animation
+// Add the toggleMenu function to handle the sliding animation and overlay visibility
 function toggleMenu() {
   const menuContent = document.querySelector(".menu-content");
+  const overlay = document.querySelector(".overlay");
+
   if (menuContent.classList.contains("closed")) {
     menuContent.classList.remove("closed");
     menuContent.classList.add("open");
+    overlay.style.display = "block"; // Show overlay
   } else {
     menuContent.classList.remove("open");
     menuContent.classList.add("closed");
+    overlay.style.display = "none"; // Hide overlay
   }
 }
