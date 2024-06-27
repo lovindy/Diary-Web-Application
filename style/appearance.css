@@ -56,17 +56,9 @@ textarea {
   margin-top: 10px;
 }
 
-.card {
-  background-color: var(--background-color);
-  border-radius: 8px;
-  padding: 16px;
-  box-shadow: 0 4px 8px var(--shadow-color);
-  color: var(--text-color);
-}
-
 /* style on each diary card */
 .card {
-  background: var(--card-bg);
+  background-color: var(--card-bg);
   border-radius: 8px;
   padding: 16px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);

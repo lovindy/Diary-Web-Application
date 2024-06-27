@@ -121,7 +121,7 @@ body {
   grid-template-columns: repeat(4, 2fr);
   gap: 16px;
   padding: 16px;
-  margin: 32px 0px;
+  margin-top: 16px;
 }
 
 /* User feedback card implement the animation move in from the bottom */
@@ -142,7 +142,6 @@ body {
   opacity: 0;
   animation: moveUp 1s ease-out forwards;
   animation-delay: var(--animation-delay);
-  backface-visibility: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -173,7 +172,7 @@ body {
 .user-feedback-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
+  transition: 0.3s;
 }
 
 .user-feedback-card img {
