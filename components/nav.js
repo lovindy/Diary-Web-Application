@@ -20,7 +20,7 @@ function createNavHTML(page) {
         <button class="button button-secondary" onclick="window.location.href='/pages/signup.html'">Sign Up</button>
       </div>
     `;
-  } else if (page === "other") {
+  } else if (page === "auth") {
     links = [
       { href: "/pages/aboutus.html", text: "About Us" },
       { href: "#", text: "Explore" },

@@ -1,0 +1,5 @@
+REVIEWBOARD_URL = "https://review.clp.kr"
+REPOSITORY = "HexCode/Seang-Makaramarady/Diary-Web"
+REPOSITORY_TYPE = "git"
+BRANCH = "feature/auth-page"
+LAND_DEST_BRANCH = "feature/auth-page"
