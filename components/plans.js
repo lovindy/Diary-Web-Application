@@ -1,71 +1,63 @@
+// script.js
+
 document.addEventListener("DOMContentLoaded", () => {
   const plans = [
     {
-      name: "Basic Plan",
+      title: "Basic Plan",
       price: "$10/month",
-      features: ["Feature 1", "Feature 2", "Feature 3"],
+      description: "Basic plan description",
     },
     {
-      name: "Standard Plan",
+      title: "Standard Plan",
       price: "$20/month",
-      features: ["Feature 1", "Feature 2", "Feature 3", "Feature 4"],
+      description: "Standard plan description",
     },
     {
-      name: "Premium Plan",
+      title: "Premium Plan",
       price: "$30/month",
-      features: [
-        "Feature 1",
-        "Feature 2",
-        "Feature 3",
-        "Feature 4",
-        "Feature 5",
-      ],
+      description: "Premium plan description",
     },
     {
-      name: "Ultimate Plan",
+      title: "Enterprise Plan",
       price: "$50/month",
-      features: [
-        "Feature 1",
-        "Feature 2",
-        "Feature 3",
-        "Feature 4",
-        "Feature 5",
-        "Feature 6",
-      ],
+      description: "Enterprise plan description",
     },
   ];
 
-  const plansContainer = document.getElementById("plans");
+  const plansContainer = document.getElementById("plans-container");
+  const modal = document.getElementById("modal");
+  const closeButton = document.getElementById("close-button");
+  const confirmButton = document.getElementById("confirm-button");
 
   plans.forEach((plan) => {
-    const planCard = document.createElement("div");
-    planCard.classList.add("plan-card");
+    const card = document.createElement("div");
+    card.className = "plan-card card";
 
-    const planTitle = document.createElement("h2");
-    planTitle.textContent = plan.name;
+    card.innerHTML = `
+          <h3>${plan.title}</h3>
+          <p>${plan.price}</p>
+          <p>${plan.description}</p>
+          <button class="choose-plan-button">Choose Plan</button>
+      `;
 
-    const planPrice = document.createElement("p");
-    planPrice.textContent = plan.price;
-
-    const planFeatures = document.createElement("ul");
-    plan.features.forEach((feature) => {
-      const featureItem = document.createElement("li");
-      featureItem.textContent = feature;
-      planFeatures.appendChild(featureItem);
+    card.querySelector(".choose-plan-button").addEventListener("click", () => {
+      modal.style.display = "flex";
     });
 
-    const planButton = document.createElement("button");
-    planButton.classList.add("btn");
-    planButton.textContent = "Choose Plan";
-    planButton.addEventListener("click", () => {
-      alert(`You have chosen the ${plan.name}`);
-    });
+    plansContainer.appendChild(card);
+  });
 
-    planCard.appendChild(planTitle);
-    planCard.appendChild(planPrice);
-    planCard.appendChild(planFeatures);
-    planCard.appendChild(planButton);
+  closeButton.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
 
-    plansContainer.appendChild(planCard);
+  confirmButton.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  window.addEventListener("click", (event) => {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
   });
 });

@@ -7,7 +7,6 @@
 @import url("/style/nav.css");
 @import url("/style/viewlist.css");
 @import url("/style/authorization.css");
-@import url("/style/form.css");
 @import url("/style/aboutus.css");
 @import url("/style/plan.css");
 @import url("/style/footer.css");
@@ -23,19 +22,24 @@
 :root {
   --background-color: #212529;
   --background-form-color: #343a40;
+
   --text-color: white;
   --date-color: #bdc3c7;
+
   --card-bg: rgba(255, 255, 255, 0.1);
   --card-border: 1px solid rgba(255, 255, 255, 0.2);
   --shadow-color: rgba(0, 0, 0, 0.2);
+
   --primary-bg: #55f2c3;
   --primary-color: black;
   --primary-hover-bg: #1b263b;
   --primary-hover-color: white;
+
   --secondary-bg: #1b263b;
   --secondary-color: white;
   --secondary-hover-bg: white;
   --secondary-hover-color: black;
+
   --delete-bg: #1b263b;
   --delete-color: white;
   --delete-hover-bg: #e53e3e;
@@ -47,19 +51,24 @@
 :root.light-mode {
   --background-color: white;
   --background-form-color: white;
+
   --text-color: #2c3e50;
   --date-color: white;
+
   --card-bg: rgba(255, 255, 255, 0.258);
   --card-border: 1px solid rgba(5, 51, 107, 0.41);
   --shadow-color: rgba(0, 0, 0, 0.1);
+
   --primary-bg: #003b7b;
   --primary-color: white;
   --primary-hover-bg: white;
   --primary-hover-color: black;
+
   --secondary-bg: black;
   --secondary-color: white;
   --secondary-hover-bg: #003b7b;
   --secondary-hover-color: white;
+
   --delete-bg: white;
   --delete-color: black;
   --delete-hover-color: white;

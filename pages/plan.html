@@ -3,17 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Our Plans</title>
+    <title>Plans Page</title>
     <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
     <nav-component page-type="home"></nav-component>
-    <header>
-      <h1 class="bebas-neue-regular">Our Plans</h1>
-    </header>
-    <section class="plans" id="plans"></section>
+    <div class="plans-container" id="plans-container"></div>
+
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <span class="close-button" id="close-button">&times;</span>
+        <h2>Confirm Your Purchase</h2>
+        <button class="confirm-button" id="confirm-button">
+          Confirm Purchase
+        </button>
+      </div>
+    </div>
+
+    <script src="/components/plans.js"></script>
+    <script src="/components/nav.js"></script>
+    <script src="/components/appearance.js"></script>
+
   </body>
-  <script src="/components/nav.js"></script>
-  <script src="/components/appearance.js"></script>
-  <script src="/components/plans.js"></script>
 </html>
