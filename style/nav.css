@@ -91,6 +91,7 @@
 
 /* Hidden Navigation Menu */
 .menu-content {
+  display: none; /* Hide by default */
   position: fixed;
   top: 0;
   right: 0;
