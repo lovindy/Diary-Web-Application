@@ -1,12 +1,17 @@
+// import components
 import { formatDate } from "./utils.js";
 
 // Function to save card to local storage
 function saveCardToLocalStorage(id, title, note, date, category) {
+  // Get card from local storage
   const cards = JSON.parse(localStorage.getItem("cards")) || [];
+  // Add card to local storage
   cards.push({ id, title, note, date, category });
+  // Save card to local storage
   localStorage.setItem("cards", JSON.stringify(cards));
 }
 
+// Get values from form
 document.getElementById("addCardBtn").addEventListener("click", (event) => {
   event.preventDefault(); // Prevent the default form submission
   const title = document.getElementById("title").value;

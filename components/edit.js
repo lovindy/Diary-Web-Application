@@ -1,10 +1,14 @@
+// import components
 import { formatDate } from "./utils.js";
 
 // Function to update card in local storage
 function updateCardInLocalStorage(id, newTitle, newNote, newCategory, newDate) {
+  // Get card from local storage
   const cards = JSON.parse(localStorage.getItem("cards")) || [];
+  // Find card by ID
   const cardIndex = cards.findIndex((card) => card.id === id);
 
+  // Check if card exists in local storage
   if (cardIndex !== -1) {
     cards[cardIndex].title = newTitle;
     cards[cardIndex].note = newNote;
@@ -16,11 +20,16 @@ function updateCardInLocalStorage(id, newTitle, newNote, newCategory, newDate) {
 
 // Function to edit card
 window.addEventListener("load", () => {
+  // Get card from local storage
   const params = new URLSearchParams(window.location.search);
+  // Get ID
   const id = params.get("id");
+  // Get card from local storage
   const cards = JSON.parse(localStorage.getItem("cards")) || [];
+  // Find card by ID
   const card = cards.find((card) => card.id === id);
 
+  // Check if card exists in local storage
   if (card) {
     document.getElementById("editContainer").innerHTML = `
         <form id="editForm">
@@ -38,13 +47,17 @@ window.addEventListener("load", () => {
         </form>
       `;
 
+    // Add event listener to save button
     document.getElementById("saveBtn").addEventListener("click", (event) => {
+      // Prevent default form submission
       event.preventDefault();
+      // Get values from form
       const newTitle = document.getElementById("title").value;
       const newNote = document.getElementById("note").value;
       const newCategory = document.getElementById("category").value;
       const newDate = document.getElementById("date").value;
 
+      // Update card in local storage
       updateCardInLocalStorage(id, newTitle, newNote, newCategory, newDate);
       window.location.href = "../pages/list.html";
     });
