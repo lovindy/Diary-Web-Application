@@ -56,22 +56,14 @@ ul {
   font-size: 32px;
 }
 
-.git-container {
+.confirm-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  margin: 16px 0;
 }
 
 #confirm-gif {
   max-width: 50px;
-}
-
-/* For smaller screens, change grid layout to 2 columns */
-@media screen and (max-width: 768px) {
-  
-}
-
-/* For even smaller screens, change grid layout to 1 column */
-@media screen and (max-width: 480px) {
-  
+  margin-bottom: 16px;
 }

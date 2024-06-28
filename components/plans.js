@@ -64,11 +64,12 @@ document.addEventListener("DOMContentLoaded", () => {
       const modalContent = modal.querySelector(".modal-content");
       modalContent.innerHTML = `
         <span class="close-button" id="close-button">&times;</span>
-        <h3>${plan.title}</h3>
-        <p>${plan.price}</p>
-        <ul>${featureList}</ul>
-        <div class="gif-container"><img src="/assets/images/Confirm.gif" id="confirm-gif" alt="Confirmation GIF" style="display:none;" /></div>
-        <button id="confirm-button" class="button-primary">Confirm</button>
+        <div class="confirm-container"><h3>${plan.title}</h3>
+          <p>${plan.price}</p>
+          <ul>${featureList}</ul>
+          <div class="gif-container"><img src="/assets/images/Confirm.gif" id="confirm-gif" alt="Confirmation GIF" style="display:none;" /></div>
+          <button id="confirm-button" class="button-primary">Confirm</button>
+        </div>
       `;
 
       // Add event listeners to the new buttons inside the modal
