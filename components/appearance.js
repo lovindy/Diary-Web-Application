@@ -1,6 +1,6 @@
 // Function to toggle dark mode
 function toggleDarkMode() {
-  // Toggle dark mode
+  // Toggle light mode
   document.documentElement.classList.toggle("light-mode");
   // Get current theme
   const isLightMode = document.documentElement.classList.contains("light-mode");
@@ -14,6 +14,9 @@ function applyTheme() {
   const savedTheme = localStorage.getItem("theme");
   if (savedTheme === "light") {
     document.documentElement.classList.add("light-mode");
+    document.querySelector(".input").checked = false;
+  } else {
+    document.querySelector(".input").checked = true;
   }
 }
 
