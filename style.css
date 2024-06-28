@@ -69,12 +69,12 @@
   --secondary-hover-bg: #003b7b;
   --secondary-hover-color: white;
 
-  --red-bg: white;
-  --red-color: black;
-  --red-hover-color: white;
-  --red-hover-bg: #e53e3e;
-  --green-bg: #0aca5a;
-  --green-hover-bg: #56ec94;
+  --delete-bg: white;
+  --delete-color: black;
+  --delete-hover-color: white;
+  --delete-hover-bg: #e53e3e;
+  --success-bg: #2ecc71;
+  --success-hover-bg: #27ae60;
 }
 
 /* Body style apply to all the pages */
@@ -296,6 +296,17 @@ body {
   .overlay {
     display: block;
   }
+  /* plan */
+  .plans-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin: 64px 0;
+  }
+
+  .plan-card {
+    margin: 12px;
+    padding: 12px;
+  }
 }
 
 /* Media queries for responsive design in mobile */
@@ -317,5 +328,28 @@ body {
   h1 {
     padding: 16px;
     transition-duration: 0.3s;
+  }
+  /* plan */
+  .plans-container {
+    grid-template-columns: 1fr;
+    margin: 32px 0;
+  }
+
+  .plan-card {
+    margin: 8px;
+    padding: 8px;
+  }
+
+  .plan-card h3 {
+    font-size: 18px;
+  }
+
+  .plan-card p {
+    font-size: 14px;
+  }
+
+  .purchasing-button {
+    margin: 12px 0;
+    font-size: 14px;
   }
 }

@@ -10,33 +10,46 @@
     <!-- navigation component -->
     <nav-component page-type="home"></nav-component>
 
-    <!-- title -->
-    <div>
-      <h1 class="bebas-neue-regular plan-title">
-        Purchase To Become Our Member
-      </h1>
-    </div>
-
-    <!-- plans component -->
-    <div class="plans-container" id="plans-container"></div>
-
-    <div class="modal" id="modal">
-      <div class="modal-content">
-        <span class="close-button" id="close-button">&times;</span>
-        <h2>Confirm Your Purchase</h2>
-        <!-- GIF for confirmation -->
-        <img
-          src="/assets/images/Confirm.gif"
-          id="confirm-gif"
-          alt="Confirmation GIF" />
-        <button class="button-primary" id="confirm-button">
-          Confirm Purchase
-        </button>
+    <main class="plan-container">
+      <!-- title -->
+      <div class="plan-hero">
+        <h1 class="bebas-neue-regular plan-title">
+          Purchase To Become Our Member
+        </h1>
+        <p>
+          Our pricing plans are designed to be affordable, flexible, and
+          tailored to your unique needs
+        </p>
+        <div class="purchasing-button">
+          <button class="button-primary">Monthly</button>
+          <button class="button-edit">Yearly</button>
+        </div>
       </div>
-    </div>
 
+      <!-- plans component -->
+      <div class="plans-container" id="plans-container"></div>
+
+      <div class="modal" id="modal">
+        <div class="modal-content">
+          <span class="close-button" id="close-button">&times;</span>
+          <h2>Confirm Your Purchase</h2>
+          <!-- GIF for confirmation -->
+          <div class="git-container">
+            <img
+              src="/assets/images/Confirm.gif"
+              id="confirm-gif"
+              alt="Confirmation GIF" />
+          </div>
+          <button class="button-primary" id="confirm-button">
+            Confirm Purchase
+          </button>
+        </div>
+      </div>
+    </main>
+    <footer-component></footer-component>
     <script src="/components/plans.js"></script>
     <script src="/components/nav.js"></script>
     <script src="/components/appearance.js"></script>
+    <script src="/components/footer.js"></script>
   </body>
 </html>

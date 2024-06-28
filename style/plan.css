@@ -4,16 +4,23 @@ ul {
   line-height: 1.8;
 }
 
-.plan-title {
+.plan-hero {
   margin: 64px 0px 0px 0px;
   text-align: center;
 }
 
+.purchasing-button {
+  margin: 16px 0px;
+}
+
 .plans-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  padding: 16px 0;
+  transition-duration: 0.3s;
+  align-items: start;
+  margin: 128px 0;
 }
 
 .plan-card {
@@ -23,7 +30,6 @@ ul {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 16px;
   padding: 16px;
-  width: 300px;
   text-align: center;
   color: var(--text-color);
   transition: 0.3s;
@@ -50,3 +56,22 @@ ul {
   font-size: 32px;
 }
 
+.git-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#confirm-gif {
+  max-width: 50px;
+}
+
+/* For smaller screens, change grid layout to 2 columns */
+@media screen and (max-width: 768px) {
+  
+}
+
+/* For even smaller screens, change grid layout to 1 column */
+@media screen and (max-width: 480px) {
+  
+}

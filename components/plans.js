@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <h3>${plan.title}</h3>
         <p>${plan.price}</p>
         <ul>${featureList}</ul>
-        <img src="/assets/images/Confirm.gif" id="confirm-gif" alt="Confirmation GIF" style="display:none;" />
+        <div class="gif-container"><img src="/assets/images/Confirm.gif" id="confirm-gif" alt="Confirmation GIF" style="display:none;" /></div>
         <button id="confirm-button" class="button-primary">Confirm</button>
       `;
 
