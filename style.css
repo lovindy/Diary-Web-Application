@@ -10,7 +10,6 @@
 @import url("/style/aboutus.css");
 @import url("/style/plan.css");
 @import url("/style/footer.css");
-@import url("/style/explore.css");
 
 /* Set the default size of website */
 * {
@@ -208,6 +207,26 @@ body {
   margin: 64px 32px 0;
 }
 
+/* explore page design */
+.explore-hero {
+  text-align: center;
+  margin: 64px 0px;
+}
+
+.explore-hero img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+.explore-card > button {
+  margin: 100px;
+}
+
+.explore-card .button-primary {
+  margin: 16px;
+}
+
 /* card alignment with grid column with 3 and next card will go down*/
 #cardsContainer {
   display: grid;
@@ -352,5 +371,12 @@ body {
   .purchasing-button {
     margin: 12px 0;
     font-size: 14px;
+  }
+}
+
+/* Media queries for responsive design in mobile */
+@media screen and (max-width: 768px) {
+  .bebas-neue-regular {
+    font-size: 32px;
   }
 }
