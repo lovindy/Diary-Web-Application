@@ -69,12 +69,12 @@
   --secondary-hover-bg: #003b7b;
   --secondary-hover-color: white;
 
-  --delete-bg: white;
-  --delete-color: black;
-  --delete-hover-color: white;
-  --delete-hover-bg: #e53e3e;
-  --success-bg: #2ecc71;
-  --success-hover-bg: #27ae60;
+  --red-bg: white;
+  --red-color: black;
+  --red-hover-color: white;
+  --red-hover-bg: #e53e3e;
+  --green-bg: #0aca5a;
+  --green-hover-bg: #56ec94;
 }
 
 /* Body style apply to all the pages */
