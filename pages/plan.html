@@ -3,17 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Our Plans</title>
+    <title>Plans Page</title>
     <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
+    <!-- navigation component -->
     <nav-component page-type="home"></nav-component>
-    <header>
-      <h1 class="bebas-neue-regular">Our Plans</h1>
-    </header>
-    <section class="plans" id="plans"></section>
+
+    <main class="plan-container">
+      <!-- title -->
+      <div class="plan-hero">
+        <h1 class="bebas-neue-regular plan-title">
+          Purchase To Become Our Member
+        </h1>
+        <p>
+          Our pricing plans are designed to be affordable, flexible, and
+          tailored to your unique needs
+        </p>
+        <div class="purchasing-button">
+          <button class="button-primary">Monthly</button>
+          <button class="button-secondary">Yearly</button>
+        </div>
+      </div>
+
+      <!-- plans component -->
+      <div class="plans-container" id="plans-container"></div>
+
+      <div class="modal" id="modal">
+        <div class="modal-content">
+          <span class="close-button" id="close-button">&times;</span>
+          <div class="confirm-container">
+            <h2>Confirm Your Purchase</h2>
+            <!-- GIF for confirmation -->
+            <img
+              src="/assets/images/Confirm.gif"
+              id="confirm-gif"
+              alt="Confirmation GIF" />
+            <button class="button-primary" id="confirm-button">
+              Confirm Purchase
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer-component></footer-component>
+    <script src="/components/plans.js"></script>
+    <script src="/components/nav.js"></script>
+    <script src="/components/appearance.js"></script>
+    <script src="/components/footer.js"></script>
   </body>
-  <script src="/components/nav.js"></script>
-  <script src="/components/appearance.js"></script>
-  <script src="/components/plans.js"></script>
 </html>

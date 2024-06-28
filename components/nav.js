@@ -1,14 +1,16 @@
 // Function to create the navigation HTML
 function createNavHTML(page) {
+  // Define the links and buttons
   let links = [];
   let buttons = "";
 
+  // Define the links and buttons based on the page
   if (page === "home") {
     links = [
       { href: "/pages/home.html", text: "Home" },
       { href: "/pages/aboutus.html", text: "About Us" },
       { href: "/pages/list.html", text: "My Diary" },
-      { href: "#", text: "Explore" },
+      { href: "/pages/explore.html", text: "Explore" },
       { href: "/pages/plan.html", text: "Plans" },
     ];
     buttons = `

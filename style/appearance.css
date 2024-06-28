@@ -63,7 +63,7 @@ textarea {
   padding: 16px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   color: var(--text-color);
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+  border: var(--card-border); 
   transition: 0.3s;
 }
 
@@ -137,7 +137,7 @@ textarea {
 }
 
 .modal-content {
-  background-color: var(--card-background-color);
+  background-color: var(--primary-hover-bg);
   padding: 16px 64px;
   animation: slideIn 0.5s;
   border-radius: 10px;
