@@ -6,6 +6,10 @@
   --linear-teal: linear-gradient(rgba(0, 0, 0, 0.5), rgba(149, 153, 152, 0.5));
 }
 
+.content-container {
+  margin: 64px 16px 0px 16px;
+}
+
 .hero {
   display: flex;
   align-items: center;
@@ -16,7 +20,6 @@
   color: white;
   height: 70vh;
   border-radius: 16px;
-  margin-top: 32px;
 }
 
 .hero-content,
