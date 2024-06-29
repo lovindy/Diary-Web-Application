@@ -21,8 +21,8 @@ function createNavHTML(page) {
           <input type="checkbox" class="input" checked onclick="toggleDarkMode()">
           <span class="slider"></span>
         </label>      
-        <button class="button button-secondary" onclick="window.location.href='/pages/signup.html'">Sign Up</button>
-        <button class="button button-primary" onclick="window.location.href='../index.html'">Log Out</button>
+        <button class="button-secondary" onclick="window.location.href='/pages/signup.html'">Sign Up</button>
+        <button class="button-primary" onclick="window.location.href='../index.html'">Log Out</button>
         </div>
     `;
   } else if (page === "auth") {

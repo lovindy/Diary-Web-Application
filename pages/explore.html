@@ -5,15 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Explore</title>
     <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/style/explore.css" />
   </head>
   <body>
+    <!-- Navigation -->
     <nav-component page-type="home"></nav-component>
+
+    <!-- Main content -->
     <main>
       <section class="explore-hero">
         <!-- Hero section with title and image -->
         <div class="hero-content">
-          <h1 class="bebas-neue-regular">Embark on a Journey of Discovery</h1>
-          <p>
+          <h1 class="bebas-neue-regular explore-title">Embark on a Journey of Discovery</h1>
+          <p class="explore-title">
             In the journey of life, every page turned reveals new adventures.
             Welcome to Explore, where your diary app unfolds its limitless
             possibilities.
@@ -24,35 +28,43 @@
 
       <section class="explore-content">
         <!-- Explore content section -->
-        <div class="user-card-container explore-card">
-          <!-- Cards to showcase different features or topics -->
-          <div class="user-feedback-card">
-            <h2>Feature 1</h2>
-            <p>Description of Feature 1.</p>
-            <button class="button-primary">Learn More</button>
-          </div>
-          <div class="user-feedback-card">
-            <h2>Feature 2</h2>
-            <p>Description of Feature 3.</p>
-            <button class="button-primary">Learn More</button>
-          </div>
-          <div class="user-feedback-card">
-            <h2>Feature 2</h2>
-            <p>Description of Feature 4.</p>
-            <button class="button-primary">Learn More</button>
-          </div>
-          <div class="user-feedback-card">
-            <h2>Feature 2</h2>
-            <p>Description of Feature 5.</p>
-            <button class="button-primary">Learn More</button>
-          </div>
-          <!-- Add more cards as needed -->
+        <div id="feature-card-container" class="feature-card-container">
+          <!-- Feature cards will be dynamically generated here -->
         </div>
       </section>
     </main>
+
+    <!-- Modals for additional information -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h2>Feature 1: Customizable Themes</h2>
+        <p>More detailed information about Customizable Themes...</p>
+      </div>
+    </div>
+    <div id="modal2" class="modal">
+      <div class="modal-content">
+        <h2>Feature 2: Secure Backup</h2>
+        <p>More detailed information about Secure Backup...</p>
+      </div>
+    </div>
+    <div id="modal3" class="modal">
+      <div class="modal-content">
+        <h2>Feature 3: Rich Text Editing</h2>
+        <p>More detailed information about Rich Text Editing...</p>
+      </div>
+    </div>
+    <div id="modal4" class="modal">
+      <div class="modal-content">
+        <h2>Feature 4: Reminders</h2>
+        <p>More detailed information about Reminders...</p>
+      </div>
+    </div>
+
+    <!-- Footer -->
     <footer-component></footer-component>
   </body>
   <script src="/components/nav.js"></script>
   <script src="/components/footer.js"></script>
   <script src="/components/appearance.js"></script>
+  <script src="/components/explore.js"></script>
 </html>
