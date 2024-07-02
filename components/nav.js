@@ -1,3 +1,7 @@
+function navigateTo(url) {
+  window.location.href = url;
+}
+
 // Function to create the navigation HTML
 function createNavHTML(page) {
   // Define the links and buttons
@@ -37,7 +41,7 @@ function createNavHTML(page) {
   let navHTML = `
     <nav class="nav-container">
       <!-- Logo -->
-      <div class="logo"><img src="/assets/icons/Diary.svg" alt="Diary Logo" /></div>
+      <div class="logo" onclick="window.location.href='../pages/home.html'"><img src="/assets/icons/Diary.svg" alt="Diary Logo" /></div>
       <!-- Link List to other pages -->
       <ul class="nav-links closed">
   `;
