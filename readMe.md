@@ -305,9 +305,9 @@
   ### 8.2 Typography
   Fonts :
   Font-Style : **Roboto**, sans-serif. (For the main)
-  ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/1eae2e72-7484-4991-b7d8-ff8695b87196/8d780891-c395-4bd5-8b80-2431c3d70191/Untitled.png)
+  ![Untitled](/uploads/35dbd81826f4eb125008e2032db9578d/Untitled.png)
   Font-Style : **Bebas Neue**, sans-serif. (For the Title)
-  ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/1eae2e72-7484-4991-b7d8-ff8695b87196/529ec8a0-f86e-4643-b2d5-48533fbad08c/Untitled.png)
+  ![san](/uploads/78e760e3a0e79c8af7f255fcbb34c7c2/san.png)
   Font Size
   Title : [64px]
   Heading : [26px]
@@ -315,7 +315,7 @@
   Paragraph : [14px]
   Description : [12px]
   ### 8.3 Color
-  ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/1eae2e72-7484-4991-b7d8-ff8695b87196/53e8fd09-b255-4ad9-8c7a-7e731f6748d1/Untitled.png)
+  ![colordiary](/uploads/5108f5ffdd33938d981f21eebe28a2d1/colordiary.png)
   Background
   #ffffff
   #55f2c3
