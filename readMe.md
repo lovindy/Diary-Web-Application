@@ -123,18 +123,18 @@
   .entry {
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+    padding: 16px;
     border: 1px solid #ccc;
-    margin-bottom: 1rem;
+    margin-bottom: 16px;
   }
 
   .entry__title {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    font-size: 16px;
+    margin-bottom: 0.56px;
   }
 
   .entry__text {
-    font-size: 1rem;
+    font-size: 16px;
     line-height: 1.5;
   }
 
