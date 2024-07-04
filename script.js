@@ -15,20 +15,22 @@ function createCardHTML(id, title, note, date, category) {
   const truncatedNote =
     note.length > 15 ? note.substring(0, 15) + "...See More" : note;
   return `
-    <div class="card" data-id="${id}">
-      <div class="card-header">
-        <h2 class="card-title">${title}</h2>
-        <span class="card-date">${formattedDate}</span>
-      </div>
-      <div class="card-body">
-        <p class="card-note">${truncatedNote}</p>
-        <p class="card-category">Category: ${category}</p>
-      </div>
-      <div class="card-footer">
-        <button class="button button-primary" onclick="window.location.href='/pages/update.html?id=${id}'">Update</button>
-        <button class="button button-delete" onclick="event.stopPropagation(); showDeleteModal(${id})">Delete</button>
-      </div>
+   <div class="card" data-id="${id}">
+    <div class="card-header">
+      <h2 class="card-title">${title}</h2>
+      <span class="card-date">
+        <img src="../assets/icons/Calendar.png"> ${formattedDate}
+      </span>
     </div>
+    <div class="card-body">
+      <p class="card-note">${truncatedNote}</p>
+      <p class="card-category">Category: ${category}</p>
+    </div>
+    <div class="card-footer">
+      <button class="button button-primary" onclick="window.location.href='/pages/update.html?id=${id}'">Update</button>
+      <button class="button button-delete" onclick="event.stopPropagation(); showDeleteModal(${id})">Delete</button>
+    </div>
+  </div>
   `;
 }
 

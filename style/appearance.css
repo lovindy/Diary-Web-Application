@@ -63,7 +63,7 @@ textarea {
   padding: 16px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   color: var(--text-color);
-  border: var(--card-border); 
+  border: var(--card-border);
   transition: 0.3s;
 }
 
@@ -79,13 +79,27 @@ textarea {
   margin-bottom: 16px;
 }
 
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
 .card-title {
   font-size: 24px;
   margin-bottom: 16px;
 }
 
 .card-date {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 8px;
   font-size: 14px;
+}
+
+.card-date img {
+  max-width: 18px;
 }
 
 .card-category {
@@ -187,6 +201,26 @@ textarea {
   transition: 0.3s;
 }
 
+.card-date-modal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.card-date-modal img {
+  max-width: 18px;
+}
+
+.date-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
 /* Specific styles for the view card modal content */
 .view-modal-content {
   text-align: left;
@@ -227,4 +261,3 @@ textarea {
     transform: translateY(-50px);
   }
 }
-
