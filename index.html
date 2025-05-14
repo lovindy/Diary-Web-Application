@@ -5,25 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
     <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Optional: Styling for the offer button */
+      .offer-container {
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .offer-button {
+        background-color: #ff5722;
+        color: white;
+        padding: 12px 24px;
+        font-size: 16px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 10px;
+      }
+
+      .offer-button:hover {
+        background-color: #e64a19;
+      }
+
+      .offer-note {
+        font-size: 14px;
+        color: #444;
+      }
+    </style>
   </head>
   <body>
     <nav-component page-type="auth"></nav-component>
+
     <div id="app" class="auth-container">
       <div class="auth">
         <!-- Login form -->
         <aside class="form-section">
           <h1 class="title">Login</h1>
           <div id="login-error" class="error-message"></div>
-          <!-- General error message -->
           <div id="login-username-error" class="error-message"></div>
-          <!-- Username error message -->
           <input
             type="text"
             id="login-username"
             placeholder="Username"
             class="input-field" />
-          <div id="login-password-error" class="error-message"></div> 
-          <!-- Password error message -->
+          <div id="login-password-error" class="error-message"></div>
           <input
             type="password"
             id="login-password"
@@ -34,6 +62,19 @@
             Don't have an account?
             <a href="/pages/signup.html" class="link">Sign Up</a>
           </p>
+
+          <!-- 💸 Direct Link Button -->
+          <div class="offer-container">
+            <p class="offer-note">🔥 Check out this exclusive offer:</p>
+            <a
+              class="offer-button"
+              href="https://www.profitableratecpm.com/mb116w1e?key=d81cf0cd43c5d390f97389fdddea096d"
+              target="_blank"
+              rel="noopener noreferrer">
+              View Special Offer
+            </a>
+          </div>
+
           <div class="third-party">
             <button class="third-party-btn google">
               <img src="/assets/images/Google.png" alt="Google" />
@@ -45,12 +86,14 @@
             </button>
           </div>
         </aside>
+
         <!-- Image design -->
         <aside class="image-section">
           <img src="/assets/icons/login.svg" alt="Login Illustration" />
         </aside>
       </div>
     </div>
+
     <script src="/components/authorization.js"></script>
     <script src="/components/nav.js"></script>
   </body>
